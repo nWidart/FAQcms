@@ -13,6 +13,7 @@
         Question Management
 
         <div class="pull-right">
+            <input type="text" placeholder="Search..." class="jsSearchQuestions">
             <a href="{{ URL::to('admin/questions/create') }}" class="btn btn-small btn-info"><i class="icon-plus-sign icon-white"></i> Create</a>
         </div>
     </h3>
@@ -61,4 +62,27 @@
 </table>
 
 {{ $questions->links() }}
+@stop
+
+@section('scripts')
+<script>
+$(document).ready(function() {
+    $("input.jsSearchQuestions").on("change keyup paste", function()
+    {
+        var value = $(this).val(),
+            data = {
+                'search' : value
+            };
+        console.log(data);
+        var posting = $.post( "/admin/questions", data );
+        posting.done( function(data)
+        {
+            console.log(data);
+            $.each(data, function(key, question) {
+                console.log( question );
+            });
+        });
+    });
+});
+</script>
 @stop

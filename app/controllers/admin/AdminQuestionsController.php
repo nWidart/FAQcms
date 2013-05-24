@@ -16,6 +16,15 @@ class AdminQuestionsController extends AdminController {
         return View::make( 'admin/questions/index', compact('questions') );
     }
 
+    public function postIndex()
+    {
+        // Grab the input
+        $searchInput = Input::get('search');
+        // Search the questions
+        return Question::where('id', '=', $searchInput)->toJson;
+        return Response::json( $questions );
+    }
+
     /**
      * Question create.
      *

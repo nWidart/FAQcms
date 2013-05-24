@@ -19,8 +19,14 @@
 
         <!-- CSS
         ================================================== -->
+        <link href="{{{ asset('assets/css/wysihtml5/bootstrap-wysihtml5-0.0.2.css') }}}" rel="stylesheet">
+        <link href="{{{ asset('assets/css/bootstrap/bootstrap.css') }}}" rel="stylesheet">
+        <link href="{{{ asset('assets/css/bootstrap/bootstrap-responsive.css') }}}" rel="stylesheet">
         <link href="{{{ asset('assets/css/tablecloth.css') }}}" rel="stylesheet">
-        {{ Basset::show('public-css.css') }}
+
+        <link href="{{{ asset('assets/css/wysihtml5/prettify.css') }}}" rel="stylesheet">
+
+        <link href="{{{ asset('assets/css/style.css') }}}" rel="stylesheet">
 
         <style>
         @section('styles')
@@ -59,6 +65,15 @@
                             <li {{ (Request::is('admin') ? ' class="active"' : '') }}><a href="{{{ URL::to('') }}}">Home</a></li>
                             <li {{ (Request::is('admin/questions*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/questions') }}}">Questions</a></li>
                             <li {{ (Request::is('admin/categories*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/categories') }}}">Categories</a></li>
+                            <li class="dropdown{{ (Request::is('admin/users*|admin/groups*') ? ' active' : '') }}">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="{{ URL::to('admin/users') }}">
+                                    <i class="icon-user icon-white"></i> Users <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li{{ (Request::is('admin/users*') ? ' class="active"' : '') }}><a href="{{ URL::to('admin/users') }}"><i class="icon-user"></i> Users</a></li>
+                                    <li{{ (Request::is('admin/groups*') ? ' class="active"' : '') }}><a href="{{ URL::to('admin/groups') }}"><i class="icon-user"></i> Groups</a></li>
+                                </ul>
+                            </li>
                         </ul>
 
                         <ul class="nav pull-right">
@@ -110,10 +125,18 @@
 
         <!-- Javascripts
         ================================================== -->
-        {{ Basset::show('public-js.js') }}
+        <script src="{{ asset( 'assets/js/jquery-1.9.1.min.js' )}}"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="{{{ asset('assets/js/wysihtml5/wysihtml5-0.4.0pre.min.js') }}}"></script>
+        <script src="{{{ asset('assets/js/bootstrap/bootstrap.js') }}}"></script>
+        <script src="{{{ asset('assets/js/wysihtml5/bootstrap-wysihtml5-0.0.2.js') }}}"></script>
+
+
+        <script src="{{{ asset('assets/js/prettify.js') }}}"></script>
         <script src="{{{ asset('assets/js/jquery.metadata.js') }}}"></script>
         <script src="{{{ asset('assets/js/jquery.tablecloth.js') }}}"></script>
         <script src="{{{ asset('assets/js/jquery.tablesorter.min.js') }}}"></script>
+        <script src="{{{ asset('assets/js/site.js') }}}"></script>
         <script>
             $(document).ready(function() {
                 $("table").tablecloth({
@@ -126,5 +149,7 @@
             });
 
         </script>
+        @section('scripts')
+        @show
     </body>
 </html>

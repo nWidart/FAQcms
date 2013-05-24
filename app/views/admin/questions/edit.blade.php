@@ -1,0 +1,183 @@
+@extends('admin/layouts.default')
+
+@section('title')
+@parent
+:: Question Update
+@stop
+
+@section('content')
+
+<div class="page-header">
+    <h3>
+        Question Update
+
+        <div class="pull-right">
+            <a href="{{ URL::to('admin/questions') }}" class="btn btn-small btn-inverse"><i class="icon-circle-arrow-left icon-white"></i> Back</a>
+        </div>
+    </h3>
+</div>
+
+<!-- Tabs -->
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#tab-general" data-toggle="tab">General</a></li>
+    <li><a href="#tab-french" data-toggle="tab">French</a></li>
+    <li><a href="#tab-english" data-toggle="tab">English</a></li>
+</ul>
+<!-- ./ tabs -->
+
+<form class="form-horizontal" method="post" action="" autocomplete="off">
+    <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+    <!-- Tabs Content -->
+    <div class="tab-content">
+        <!-- Tab General -->
+        <div class="tab-pane active" id="tab-general">
+            <!-- Question priority -->
+            <div class="control-group {{ $errors->has('priority') ? 'error' : '' }}">
+                <label class="control-label" for="priority">Priority</label>
+                <div class="controls">
+                    <input type="text" name="priority" id="priority" value="{{ Input::old('priority', $question->priority) }}" />
+                    {{ $errors->first('priority', '<span class="help-inline">:message</span>') }}
+                </div>
+            </div>
+            <!-- ./ Question priority -->
+
+            <!-- Question category -->
+            <div class="control-group {{ $errors->has('category') ? 'error' : '' }}">
+                <label class="control-label" for="category">Category</label>
+                <div class="controls">
+                    <select name="category" id="category">
+                        @foreach($categories as $category)
+                            <option value="{{ $category->id }}" <?php echo ( Input::old('category') || ( $question->category_id == $category->id ) ) ? 'selected' : ''; ?>>{{ $category->name }}</option>
+                        @endforeach
+                    </select>
+                    {{ $errors->first('category', '<span class="help-inline">:message</span>') }}
+                </div>
+            </div>
+            <!-- ./ Question category -->
+
+            <!-- Question actif -->
+            <div class="control-group {{ $errors->has('actif') ? 'error' : '' }}">
+                <label class="control-label" for="actif">Actif</label>
+                <div class="controls">
+                    <input type="checkbox" name="actif" id="actif" <?php echo (Input::old('actif')  || ( $question->actif) ) ? 'checked' : ''; ?> />
+                    {{ $errors->first('actif', '<span class="help-inline">:message</span>') }}
+                </div>
+            </div>
+            <!-- ./ Question actif -->
+
+            <!-- Question public -->
+            <div class="control-group {{ $errors->has('public') ? 'error' : '' }}">
+                <label class="control-label" for="public">public</label>
+                <div class="controls">
+                    <input type="checkbox" name="public" id="public" <?php echo ( Input::old('public')  || ( $question->public) ) ? 'checked' : ''; ?> />
+                    {{ $errors->first('public', '<span class="help-inline">:message</span>') }}
+                </div>
+            </div>
+            <!-- ./ Question public -->
+
+        </div>
+        <!-- ./ tab general -->
+
+        <!-- Meta French -->
+        <div class="tab-pane" id="tab-french">
+            <!-- question_fr -->
+            <div class="control-group {{ $errors->has('question_fr') ? 'error' : '' }}">
+                <label class="control-label" for="question_fr">Question</label>
+                <div class="controls">
+                    <textarea class="full-width span10" name="question_fr" id="question_fr" value="question_fr" rows="10">{{ Input::old('question_fr', $question->question_fr) }}</textarea>
+                    {{ $errors->first('question_fr', '<span class="help-inline">:message</span>') }}
+                </div>
+            </div>
+            <!-- ./ question_fr -->
+
+            <!-- reponse_fr -->
+            <div class="control-group {{ $errors->has('reponse_fr') ? 'error' : '' }}">
+                <label class="control-label" for="reponse_fr">Réponse</label>
+                <div class="controls">
+                    <textarea class="full-width span10" name="reponse_fr" id="reponse_fr" value="reponse_fr" rows="10">{{ Input::old('reponse_fr', $question->reponse_fr) }}</textarea>
+                    {{ $errors->first('reponse_fr', '<span class="help-inline">:message</span>') }}
+                </div>
+            </div>
+            <!-- ./ reponse_fr -->
+
+            <!-- title_fr -->
+            <div class="control-group {{ $errors->has('title_fr') ? 'error' : '' }}">
+                <label class="control-label" for="title_fr">Titre</label>
+                <div class="controls">
+                    <input type="text" name="title_fr" id="title_fr" class="span10" value="{{ Input::old('title_fr', $question->title_fr) }}" />
+                    {{ $errors->first('title_fr', '<span class="help-inline">:message</span>') }}
+                </div>
+            </div>
+            <!-- ./ title_fr -->
+
+            <!-- keywords_fr -->
+            <div class="control-group {{ $errors->has('keywords_fr') ? 'error' : '' }}">
+                <label class="control-label" for="keywords_fr">Keywords</label>
+                <div class="controls">
+                    <textarea class="full-width span10" name="keywords_fr" id="keywords_fr" value="keywords_fr" rows="5">{{ Input::old('keywords_fr', $question->keywords_fr) }}</textarea>
+                    {{ $errors->first('keywords_fr', '<span class="help-inline">:message</span>') }}
+                </div>
+            </div>
+            <!-- ./ keywords_fr -->
+        </div>
+        <!-- ./ meta French -->
+
+        <!-- Meta english -->
+        <div class="tab-pane" id="tab-english">
+            <!-- question_en -->
+            <div class="control-group {{ $errors->has('question_en') ? 'error' : '' }}">
+                <label class="control-label" for="question_en">Question</label>
+                <div class="controls">
+                    <textarea class="full-width span10" name="question_en" id="question_en" value="question_en" rows="10">{{ Input::old('question_en', $question->question_en) }}</textarea>
+                    {{ $errors->first('question_en', '<span class="help-inline">:message</span>') }}
+                </div>
+            </div>
+            <!-- ./ question_en -->
+
+            <!-- reponse_en -->
+            <div class="control-group {{ $errors->has('reponse_en') ? 'error' : '' }}">
+                <label class="control-label" for="reponse_en">Response</label>
+                <div class="controls">
+                    <textarea class="full-width span10" name="reponse_en" id="reponse_en" value="reponse_en" rows="10">{{ Input::old('reponse_en', $question->reponse_en) }}</textarea>
+                    {{ $errors->first('reponse_en', '<span class="help-inline">:message</span>') }}
+                </div>
+            </div>
+            <!-- ./ reponse_en -->
+
+            <!-- title_en -->
+            <div class="control-group {{ $errors->has('title_en') ? 'error' : '' }}">
+                <label class="control-label" for="title_en">Title</label>
+                <div class="controls">
+                    <input type="text" name="title_en" id="title_en" class="span10" value="{{ Input::old('title_en', $question->title_en) }}" />
+                    {{ $errors->first('title_en', '<span class="help-inline">:message</span>') }}
+                </div>
+            </div>
+            <!-- ./ title_en -->
+
+            <!-- keywords_en -->
+            <div class="control-group {{ $errors->has('keywords_en') ? 'error' : '' }}">
+                <label class="control-label" for="keywords_en">Keywords</label>
+                <div class="controls">
+                    <textarea class="full-width span10" name="keywords_en" id="keywords_en" value="keywords_en" rows="5">{{ Input::old('keywords_en', $question->keywords_en) }}</textarea>
+                    {{ $errors->first('keywords_en', '<span class="help-inline">:message</span>') }}
+                </div>
+            </div>
+            <!-- ./ keywords_en -->
+        </div>
+        <!-- ./ meta english -->
+    </div>
+    <!-- ./ tabs content -->
+
+    <!-- Form Actions -->
+    <div class="control-group">
+        <div class="controls">
+            <a class="btn btn-link" href="{{ URL::to('admin/questions') }}">Cancel</a>
+            <button type="reset" class="btn">Reset</button>
+            <button type="submit" class="btn btn-success">Publish</button>
+        </div>
+    </div>
+    <!-- ./ form actions -->
+
+{{ Form::close() }}
+
+@stop

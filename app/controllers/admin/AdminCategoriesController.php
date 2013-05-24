@@ -10,7 +10,7 @@ class AdminCategoriesController extends AdminController {
     public function getIndex()
     {
         // Grab all the categories
-        $categories = Category::orderBy('name', 'DESC')->paginate(20);
+        $categories = Category::orderBy('created_at', 'DESC')->paginate(20);
 
         // Show the page
         return View::make( 'admin/categories/index', compact('categories') );

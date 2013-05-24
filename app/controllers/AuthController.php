@@ -2,6 +2,16 @@
 
 class AuthController extends BaseController {
 
+    public function getIndex()
+    {
+        if ( !Sentry::check() )
+        {
+            return Redirect::to('account/login');
+        }
+        // Show the page
+        return View::make('account/index');
+    }
+
     /**
      * Account login.
      *

@@ -85,8 +85,6 @@
                                         <i class="icon-user"></i> admin <span class="caret"></span>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#"><i class="icon-wrench"></i> Settings</a></li>
-                                        <li class="divider"></li>
                                         <li><a href="{{URL::to('account/logout')}}"><i class="icon-share"></i> Logout</a></li>
                                     </ul>
                                 </div>
@@ -139,13 +137,7 @@
         <script src="{{{ asset('assets/js/site.js') }}}"></script>
         <script>
             $(document).ready(function() {
-                $("table").tablecloth({
-                    theme: "default",
-                    bordered: true,
-                    condensed: true,
-                    sortable: true,
-                    striped: true
-                });
+
             });
 
         </script>

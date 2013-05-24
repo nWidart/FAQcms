@@ -21,8 +21,11 @@ class AdminQuestionsController extends AdminController {
         // Grab the input
         $searchInput = Input::get('search');
         // Search the questions
-        return Question::where('id', '=', $searchInput)->toJson;
-        return Response::json( $questions );
+        $questions = Question::where('question_fr', 'LIKE', '%' . $searchInput . '%')
+                        ->orWhere('question_en', 'LIKE', '%' . $searchInput . '%')
+                        ->paginate(20);
+        // return Response::json( $questions );
+        return View::make( 'admin/questions/index', compact('questions') );
     }
 
     /**
@@ -72,6 +75,8 @@ class AdminQuestionsController extends AdminController {
             $question->reponse_en       = Input::get('reponse_en');
             $question->title_en         = Input::get('title_en');
             $question->keywords_en      = Input::get('keywords_en');
+            $question->remarque1        = Input::get('remarque1');
+            $question->remarque2        = Input::get('remarque2');
             $question->user_id          = Sentry::getId();
 
 
@@ -152,6 +157,8 @@ class AdminQuestionsController extends AdminController {
             $question->reponse_en       = Input::get('reponse_en');
             $question->title_en         = Input::get('title_en');
             $question->keywords_en      = Input::get('keywords_en');
+            $question->remarque1        = Input::get('remarque1');
+            $question->remarque2        = Input::get('remarque2');
 
             // Was the question updated?
             if($question->save())

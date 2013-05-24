@@ -19,7 +19,13 @@
 
         <!-- CSS
         ================================================== -->
-        {{ Basset::show('public-css.css') }}
+        <link href="{{{ asset('assets/css/bootstrap/bootstrap.css') }}}" rel="stylesheet">
+        <link href="{{{ asset('assets/css/bootstrap/bootstrap-responsive.css') }}}" rel="stylesheet">
+
+
+        <link href="{{{ asset('assets/css/wysihtml5/prettify.css') }}}" rel="stylesheet">
+
+        <link href="{{{ asset('assets/css/style.css') }}}" rel="stylesheet">
 
         <style>
         @section('styles')
@@ -70,8 +76,6 @@
                                         <b class="caret"></b>
                                     </a>
                                     <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                                        <li{{ (Request::is('account/settings') ? ' class="active"' : '') }}><a href="{{ URL::to('account/settings') }}"><i class="icon-cog"></i> Settings</a></li>
-                                        <li class="divider"></li>
                                         <li><a href="{{ URL::to('account/logout') }}"><i class="icon-off"></i> Logout</a></li>
                                     </ul>
                                 </li>
@@ -113,6 +117,13 @@
 
         <!-- Javascripts
         ================================================== -->
-        {{ Basset::show('public-js.js') }}
+        <script src="{{ asset( 'assets/js/jquery-1.9.1.min.js' )}}"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="{{{ asset('assets/js/bootstrap/bootstrap.js') }}}"></script>
+        <script src="{{{ asset('assets/js/prettify.js') }}}"></script>
+        <script src="{{{ asset('assets/js/site.js') }}}"></script>
+
+        @section('scripts')
+        @show
     </body>
 </html>

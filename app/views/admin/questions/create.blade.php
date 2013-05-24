@@ -23,6 +23,7 @@
     <li class="active"><a href="#tab-general" data-toggle="tab">General</a></li>
     <li><a href="#tab-french" data-toggle="tab">French</a></li>
     <li><a href="#tab-english" data-toggle="tab">English</a></li>
+    <li><a href="#tab-remarques" data-toggle="tab">Remarques</a></li>
 </ul>
 <!-- ./ tabs -->
 
@@ -88,7 +89,7 @@
             <div class="control-group {{ $errors->has('question_fr') ? 'error' : '' }}">
                 <label class="control-label" for="question_fr">Question</label>
                 <div class="controls">
-                    <textarea class="full-width span10" name="question_fr" id="question_fr" value="question_fr" rows="10">{{ Input::old('question_fr') }}</textarea>
+                    <textarea class="full-width span10 wysihtml5-textarea" name="question_fr" id="question_fr" value="question_fr" rows="10">{{ Input::old('question_fr') }}</textarea>
                     {{ $errors->first('question_fr', '<span class="help-inline">:message</span>') }}
                 </div>
             </div>
@@ -98,7 +99,7 @@
             <div class="control-group {{ $errors->has('reponse_fr') ? 'error' : '' }}">
                 <label class="control-label" for="reponse_fr">Réponse</label>
                 <div class="controls">
-                    <textarea class="full-width span10" name="reponse_fr" id="reponse_fr" value="reponse_fr" rows="10">{{ Input::old('reponse_fr') }}</textarea>
+                    <textarea class="full-width span10 wysihtml5-textarea" name="reponse_fr" id="reponse_fr" value="reponse_fr" rows="10">{{ Input::old('reponse_fr') }}</textarea>
                     {{ $errors->first('reponse_fr', '<span class="help-inline">:message</span>') }}
                 </div>
             </div>
@@ -126,13 +127,13 @@
         </div>
         <!-- ./ meta French -->
 
-        <!-- Meta english -->
+        <!-- tab english -->
         <div class="tab-pane" id="tab-english">
             <!-- question_en -->
             <div class="control-group {{ $errors->has('question_en') ? 'error' : '' }}">
                 <label class="control-label" for="question_en">Question</label>
                 <div class="controls">
-                    <textarea class="full-width span10" name="question_en" id="question_en" value="question_en" rows="10">{{ Input::old('question_en') }}</textarea>
+                    <textarea class="full-width span10 wysihtml5-textarea" name="question_en" id="question_en" value="question_en" rows="10">{{ Input::old('question_en') }}</textarea>
                     {{ $errors->first('question_en', '<span class="help-inline">:message</span>') }}
                 </div>
             </div>
@@ -142,7 +143,7 @@
             <div class="control-group {{ $errors->has('reponse_en') ? 'error' : '' }}">
                 <label class="control-label" for="reponse_en">Response</label>
                 <div class="controls">
-                    <textarea class="full-width span10" name="reponse_en" id="reponse_en" value="reponse_en" rows="10">{{ Input::old('reponse_en') }}</textarea>
+                    <textarea class="full-width span10 wysihtml5-textarea" name="reponse_en" id="reponse_en" value="reponse_en" rows="10">{{ Input::old('reponse_en') }}</textarea>
                     {{ $errors->first('reponse_en', '<span class="help-inline">:message</span>') }}
                 </div>
             </div>
@@ -168,7 +169,31 @@
             </div>
             <!-- ./ keywords_en -->
         </div>
-        <!-- ./ meta english -->
+        <!-- ./ tab english -->
+        <!-- tab remarques -->
+        <div class="tab-pane" id="tab-remarques">
+
+            <!-- remarque 1 -->
+            <div class="control-group {{ $errors->has('remarque1') ? 'error' : '' }}">
+                <label class="control-label" for="remarque1">Remarque #1</label>
+                <div class="controls">
+                    <textarea class="full-width span10" name="remarque1" id="remarque1" value="remarque1" rows="5">{{ Input::old('remarque1') }}</textarea>
+                    {{ $errors->first('remarque1', '<span class="help-inline">:message</span>') }}
+                </div>
+            </div>
+            <!-- ./ remarque1 -->
+
+            <!-- remarque2 -->
+            <div class="control-group {{ $errors->has('remarque2') ? 'error' : '' }}">
+                <label class="control-label" for="remarque2">Remarque #2</label>
+                <div class="controls">
+                    <textarea class="full-width span10" name="remarque2" id="remarque2" value="remarque2" rows="5">{{ Input::old('remarque2') }}</textarea>
+                    {{ $errors->first('remarque2', '<span class="help-inline">:message</span>') }}
+                </div>
+            </div>
+            <!-- ./ remarque2 -->
+        </div>
+        <!-- ./ tab remarque -->
     </div>
     <!-- ./ tabs content -->
 
@@ -182,4 +207,12 @@
     </div>
     <!-- ./ form actions -->
 </form>
+@stop
+
+@section('scripts')
+<script>
+$(document).ready(function() {
+    $('.wysihtml5-textarea').wysihtml5();
+});
+</script>
 @stop

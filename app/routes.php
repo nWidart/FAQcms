@@ -1,8 +1,14 @@
 <?php
 Route::get('/', function()
 {
-	return View::make('hello');
+    // Show the page
+    return Redirect::to('account/login');
 });
+// Route::get('/', function()
+// {
+// 	return View::make('hello');
+// });
+// Route::get('/', 'AuthController@getLogin');
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +18,7 @@ Route::get('/', function()
 
 Route::group( array( 'prefix' => 'account' ), function()
 {
+    Route::get('/', 'AuthController@getIndex');
     # Login
     Route::get('login', 'AuthController@getLogin');
     Route::post('login', 'AuthController@postLogin');

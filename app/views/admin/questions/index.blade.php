@@ -13,7 +13,11 @@
         Question Management
 
         <div class="pull-right">
-            <input type="text" placeholder="Search..." class="jsSearchQuestions">
+            <!-- <input type="text" placeholder="Search..." class="jsSearchQuestions"> -->
+            <form class="form-search" method="POST" action="" style="display: inline;">
+                <input type="text" class="input-medium search-query search" name="search" placeholder="Search...">
+                <button type="submit" class="btn">Search</button>
+            </form>
             <a href="{{ URL::to('admin/questions/create') }}" class="btn btn-small btn-info"><i class="icon-plus-sign icon-white"></i> Create</a>
         </div>
     </h3>

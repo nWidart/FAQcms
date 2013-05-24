@@ -22,6 +22,7 @@
     <li class="active"><a href="#tab-general" data-toggle="tab">General</a></li>
     <li><a href="#tab-french" data-toggle="tab">French</a></li>
     <li><a href="#tab-english" data-toggle="tab">English</a></li>
+    <li><a href="#tab-remarques" data-toggle="tab">Remarques</a></li>
 </ul>
 <!-- ./ tabs -->
 
@@ -122,7 +123,7 @@
         </div>
         <!-- ./ meta French -->
 
-        <!-- Meta english -->
+        <!-- Tab english -->
         <div class="tab-pane" id="tab-english">
             <!-- question_en -->
             <div class="control-group {{ $errors->has('question_en') ? 'error' : '' }}">
@@ -164,7 +165,32 @@
             </div>
             <!-- ./ keywords_en -->
         </div>
-        <!-- ./ meta english -->
+        <!-- ./ Tab english -->
+        <!-- tab remarques -->
+        <div class="tab-pane" id="tab-remarques">
+
+            <!-- remarque 1 -->
+            <div class="control-group {{ $errors->has('remarque1') ? 'error' : '' }}">
+                <label class="control-label" for="remarque1">Remarque #1</label>
+                <div class="controls">
+                    <textarea class="full-width span10" name="remarque1" id="remarque1" value="remarque1" rows="5">{{ Input::old('remarque1', $question->remarque1) }}</textarea>
+                    {{ $errors->first('remarque1', '<span class="help-inline">:message</span>') }}
+                </div>
+            </div>
+            <!-- ./ remarque1 -->
+
+            <!-- remarque2 -->
+            <div class="control-group {{ $errors->has('remarque2') ? 'error' : '' }}">
+                <label class="control-label" for="remarque2">Remarque #2</label>
+                <div class="controls">
+                    <textarea class="full-width span10" name="remarque2" id="remarque2" value="remarque2" rows="5">{{ Input::old('remarque2', $question->remarque2) }}</textarea>
+                    {{ $errors->first('remarque2', '<span class="help-inline">:message</span>') }}
+                </div>
+            </div>
+            <!-- ./ remarque2 -->
+        </div>
+        <!-- ./ tab remarque -->
+
     </div>
     <!-- ./ tabs content -->
 

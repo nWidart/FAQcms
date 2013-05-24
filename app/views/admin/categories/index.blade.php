@@ -24,6 +24,8 @@
             <th class="span1 smallTr">Actions</th>
             <th class="span1">ID</th>
             <th class="span1">Category Name</th>
+            <th class="span1">Created At</th>
+            <td class="span1">Questions Count</td>
         </tr>
     </thead>
     <tbody>
@@ -35,10 +37,17 @@
             </td>
             <td>{{ $category->id }}</td>
             <td>{{ $category->name }}</td>
+            <td>{{ $category->created_at() }}</td>
+            <td>{{ $category->questions()->count() }}</td>
         </tr>
         @endforeach
     </tbody>
 </table>
 
 {{ $categories->links() }}
+@stop
+@scripts
+<script>
+
+</script>
 @stop

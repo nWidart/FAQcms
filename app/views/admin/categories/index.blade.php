@@ -9,33 +9,24 @@
 {{-- Content --}}
 @section('content')
 <div class="page-header">
-    <h3>
-        Category Management
-
-        <div class="pull-right">
-            <a href="{{ URL::to('admin/categories/create') }}" class="btn btn-small btn-info"><i class="icon-plus-sign icon-white"></i> Create</a>
-        </div>
-    </h3>
+    <a href="{{ URL::to('admin/categories/create') }}" class="btn btn-small btn-info"><i class="icon-plus-sign icon-white"></i> Create</a>
 </div>
 
 <table class="table table-bordered table-hover">
     <thead>
         <tr>
-            <th class="span1 smallTr">Actions</th>
-            <th class="span1">ID</th>
+            <th class="span1">id</th>
             <th class="span1">Category Name</th>
             <th class="span1">Created At</th>
-            <td class="span1">Questions Count</td>
+            <th class="span1">Questions Count</th>
         </tr>
     </thead>
     <tbody>
         @foreach ($categories as $category)
-        <tr>
+        <tr onclick="document.location='{{ URL::to('admin/categories/' . $category->id . '/edit') }}'" style="cursor: pointer">
             <td>
-                <a href="{{ URL::to('admin/categories/' . $category->id . '/edit') }}" class="btn btn-mini">{{ Lang::get('button.edit') }}</a>
-                <a href="{{ URL::to('admin/categories/' . $category->id . '/delete') }}" class="btn btn-mini btn-danger">{{ Lang::get('button.delete') }}</a>
+                {{ $category->id }}
             </td>
-            <td>{{ $category->id }}</td>
             <td>{{ $category->name }}</td>
             <td>{{ $category->created_at() }}</td>
             <td>{{ $category->questions()->count() }}</td>
@@ -43,6 +34,8 @@
         @endforeach
     </tbody>
 </table>
+
+
 
 {{ $categories->links() }}
 @stop

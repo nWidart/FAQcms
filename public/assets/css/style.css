@@ -8,6 +8,9 @@ body {
 .smallTr {
     width: 6%!important;
 }
+tr:hover td {
+    background: #D7F0CE!important;
+}
 
 
 /* Wrapper for page content to push down footer */

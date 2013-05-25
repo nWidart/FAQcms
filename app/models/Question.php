@@ -9,9 +9,18 @@ class Question extends Eloquent {
 
     public function category()
     {
-        return $this->belongsTo('Category');
+        return $this->belongsTo('Category', 'category_id');
     }
 
+    public function category2()
+    {
+        return $this->belongsTo('Category', 'category_id_2');
+    }
+
+    public function category3()
+    {
+        return $this->belongsTo('Category', 'category_id_3');
+    }
     /**
      * Get the Questions's author.
      *

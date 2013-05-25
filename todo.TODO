@@ -1,0 +1,18 @@
+A Faire:
+✔ After login: redirect vers /questions @done (13-05-25 10:34)
+ ✔ Rajouter 3ième case : Checked @done (13-05-25 10:38)
+ ✔ Bouton Delete: "D" @done (13-05-25 10:39)
+ ✔ survol: vert clair: #D7F0CE @done (13-05-25 10:46)
+ ✔ Bouton create gauche + recherche @done (13-05-25 10:46)
+ ✔ pas de titre @done (13-05-25 10:46)
+
+ ✔ Trier par Category @done (13-05-25 10:46)
+ edit:
+ ✔ Enlever bouton cancel & back @done (13-05-25 10:53)
+ category:
+ ✔ 3 Types de catégories @done (13-05-25 11:25)
+ ✔ Detelete : D @done (13-05-25 10:53)
+
+Trop long:
+ ✔ Champs Category 2, Category 3 @done (13-05-25 11:25)
+ ☐ Editer question: AJAX

@@ -8,16 +8,7 @@
 
 {{-- Content --}}
 @section('content')
-<div class="page-header">
-    <h3>
-        Create a New Question
-
-        <div class="pull-right">
-            <a href="{{ URL::to('admin/questions') }}" class="btn btn-small btn-inverse"><i class="icon-circle-arrow-left icon-white"></i> Back</a>
-        </div>
-    </h3>
-</div>
-
+<div class="row">a</div>
 <!-- Tabs -->
 <ul class="nav nav-tabs">
     <li class="active"><a href="#tab-general" data-toggle="tab">General</a></li>
@@ -40,7 +31,7 @@
             <div class="control-group {{ $errors->has('priority') ? 'error' : '' }}">
                 <label class="control-label" for="priority">Priority</label>
                 <div class="controls">
-                    <input type="text" name="priority" id="priority" value="{{ Input::old('priority') }}" />
+                    <input type="text" name="priority" id="priority" value="{{ Input::old('priority', '50') }}" />
                     {{ $errors->first('priority', '<span class="help-inline">:message</span>') }}
                 </div>
             </div>
@@ -51,12 +42,33 @@
                 <label class="control-label" for="category">Category</label>
                 <div class="controls">
                     <select name="category" id="category">
+                        <option value="0">Choose Category</option>
                         @foreach($categories as $category)
                             <option value="{{ $category->id }}" <?php echo (Input::old('category')) ? 'selected' :''; ?>>{{ $category->name }}</option>
                         @endforeach
                     </select>
                     {{ $errors->first('category', '<span class="help-inline">:message</span>') }}
+                    <!-- end category1 -->
+
+                     <select name="category2" id="category2">
+                        <option value="0">Category 2 (none)</option>
+                        @foreach($categories as $category)
+                            <option value="{{ $category->id }}" <?php echo (Input::old('category2')) ? 'selected' :''; ?>>{{ $category->name }}</option>
+                        @endforeach
+                    </select>
+                    {{ $errors->first('category2', '<span class="help-inline">:message</span>') }}
+                    <!-- end category2 -->
+
+                    <select name="category3" id="category3">
+                        <option value="0">Category 3 (none) </option>
+                        @foreach($categories as $category)
+                            <option value="{{ $category->id }}" <?php echo (Input::old('category3')) ? 'selected' :''; ?>>{{ $category->name }}</option>
+                        @endforeach
+                    </select>
+                    {{ $errors->first('category3', '<span class="help-inline">:message</span>') }}
+                    <!-- end category3 -->
                 </div>
+
             </div>
             <!-- ./ Question category -->
 
@@ -79,6 +91,16 @@
                 </div>
             </div>
             <!-- ./ Question public -->
+
+            <!-- Question checked -->
+            <div class="control-group {{ $errors->has('checked') ? 'error' : '' }}">
+                <label class="control-label" for="checked">checked</label>
+                <div class="controls">
+                    <input type="checkbox" name="checked" id="checked" <?php echo (Input::old('checked')) ? 'checked' : ''; ?> />
+                    {{ $errors->first('checked', '<span class="help-inline">:message</span>') }}
+                </div>
+            </div>
+            <!-- ./ Question checked -->
 
         </div>
         <!-- ./ tab general -->
@@ -200,8 +222,6 @@
     <!-- Form Actions -->
     <div class="control-group">
         <div class="controls">
-            <a class="btn btn-link" href="{{ URL::to('admin/questions') }}">Cancel</a>
-            <button type="reset" class="btn">Reset</button>
             <button type="submit" class="btn btn-success">Publish</button>
         </div>
     </div>

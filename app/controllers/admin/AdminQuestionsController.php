@@ -10,7 +10,7 @@ class AdminQuestionsController extends AdminController {
     public function getIndex()
     {
         // Grab all the questions
-        $questions = Question::with('category')->orderBy('priority', 'DESC')->paginate(20);
+        $questions = Question::with('category')->orderBy('category_id', 'ASC')->orderBy('category_id_2', 'ASC')->orderBy('category_id_3', 'ASC')->orderBy('priority', 'ASC')->paginate(20);
 
         // Show the page
         return View::make( 'admin/questions/index', compact('questions') );
@@ -52,8 +52,6 @@ class AdminQuestionsController extends AdminController {
             'priority'   => 'required|integer',
             'category' => 'required',
             'question_fr' => 'required',
-            'reponse_fr' => 'required',
-            'title_fr' => 'required',
         );
         // Validate the inputs
         $validator = Validator::make( Input::all(), $rules );
@@ -64,9 +62,12 @@ class AdminQuestionsController extends AdminController {
 
             // The data
             $question->category_id      = Input::get('category');
+            $question->category_id_2      = ( Input::get('category2') == 0 ) ? null : Input::get('category2');
+            $question->category_id_3      = ( Input::get('category3') == 0 ) ? null : Input::get('category3');
             $question->priority         = Input::get('priority');
             $question->actif            = ( Input::get('actif') ) ? 1 : 0 ;
             $question->public           = ( Input::get('public') ) ? 1 : 0 ;
+            $question->checked          = ( Input::get('checked') ) ? 1 : 0 ;
             $question->question_fr      = Input::get('question_fr');
             $question->reponse_fr       = Input::get('reponse_fr');
             $question->title_fr         = Input::get('title_fr');
@@ -134,8 +135,6 @@ class AdminQuestionsController extends AdminController {
             'priority'   => 'required|integer',
             'category' => 'required',
             'question_fr' => 'required',
-            'reponse_fr' => 'required',
-            'title_fr' => 'required',
         );
 
         // Validate the inputs
@@ -146,9 +145,12 @@ class AdminQuestionsController extends AdminController {
         {
             // Update the question data
             $question->category_id      = Input::get('category');
+            $question->category_id_2      = ( Input::get('category2') == 0 ) ? null : Input::get('category2');
+            $question->category_id_3      = ( Input::get('category3') == 0 ) ? null : Input::get('category3');
             $question->priority         = Input::get('priority');
             $question->actif            = ( Input::get('actif') ) ? 1 : 0 ;
             $question->public           = ( Input::get('public') ) ? 1 : 0 ;
+            $question->checked          = ( Input::get('checked') ) ? 1 : 0 ;
             $question->question_fr      = Input::get('question_fr');
             $question->reponse_fr       = Input::get('reponse_fr');
             $question->title_fr         = Input::get('title_fr');

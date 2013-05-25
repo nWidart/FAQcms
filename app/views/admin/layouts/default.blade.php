@@ -62,7 +62,6 @@
 
                     <div class="nav-collapse collapse">
                         <ul class="nav">
-                            <li {{ (Request::is('admin') ? ' class="active"' : '') }}><a href="{{{ URL::to('') }}}">Home</a></li>
                             <li {{ (Request::is('admin/questions*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/questions') }}}">Questions</a></li>
                             <li {{ (Request::is('admin/categories*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/categories') }}}">Categories</a></li>
                             <li class="dropdown{{ (Request::is('admin/users*|admin/groups*') ? ' active' : '') }}">

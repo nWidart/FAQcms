@@ -8,15 +8,7 @@
 
 {{-- Content --}}
 @section('content')
-<div class="page-header">
-	<h3>
-		User Update
-
-		<div class="pull-right">
-			<a href="{{ URL::to('admin/users') }}" class="btn btn-small btn-inverse"><i class="icon-circle-arrow-left icon-white"></i> Back</a>
-		</div>
-	</h3>
-</div>
+<div class="row">a</div>
 
 <!-- Tabs -->
 <ul class="nav nav-tabs">
@@ -137,11 +129,30 @@
 	<!-- Form Actions -->
 	<div class="control-group">
 		<div class="controls">
-			<a class="btn btn-link" href="{{ URL::to('admin/users') }}">Cancel</a>
-			<button type="reset" class="btn">Reset</button>
+			<!-- <a class="btn btn-link" href="{{ URL::to('admin/users') }}">Cancel</a> -->
+			@if (Sentry::getId() !== $user->id)
+				<a href="#modalDelete" role="button" data-toggle="modal" class="btn btn-danger">{{ Lang::get('button.delete') }}</a>
+			@endif
 			<button type="submit" class="btn btn-success">Update User</button>
 		</div>
 	</div>
 	<!-- ./ form actions -->
 </form>
+
+<div class="modal small hide fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Confirmation de suppresion</h3>
+    </div>
+    <div class="modal-body">
+        <p class="error-text">Etes vous sur de vouloir supprimer le User? </p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Annuler</button>
+        <a href="{{ URL::to('admin/users/' . $user->id . '/delete') }}">
+            <button class="btn btn-danger">Suprimmer</button>
+        </a>
+    </div>
+</div>
+
 @stop

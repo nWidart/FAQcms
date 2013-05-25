@@ -8,15 +8,7 @@
 
 {{-- Content --}}
 @section('content')
-<div class="page-header">
-    <h3>
-        Update a Category
-
-        <div class="pull-right">
-            <a href="{{ URL::to('admin/categories') }}" class="btn btn-small btn-inverse"><i class="icon-circle-arrow-left icon-white"></i> Back</a>
-        </div>
-    </h3>
-</div>
+<div class="row">a</div>
 
 <form class="form-horizontal" method="post" action="" autocomplete="off">
     <!-- CSRF Token -->
@@ -35,12 +27,27 @@
     <!-- Form Actions -->
     <div class="control-group">
         <div class="controls">
-            <a class="btn btn-link" href="{{ URL::to('admin/categories') }}">Cancel</a>
-            <button type="reset" class="btn">Reset</button>
-            <button type="submit" class="btn btn-success">Publish</button>
+            <a href="#modalDelete" role="button" data-toggle="modal" class="btn btn-danger">{{ Lang::get('button.delete') }}</a>
+            <button type="submit" class="btn btn-success">Edit</button>
         </div>
     </div>
     <!-- ./ form actions -->
 
 </form>
+
+<div class="modal small hide fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Confirmation de suppresion</h3>
+    </div>
+    <div class="modal-body">
+        <p class="error-text">Etes vous sur de vouloir supprimer la catégorie? Ceci suprimera toutes les questions dans cette catégorie.</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Annuler</button>
+        <a href="{{ URL::to('admin/categories/' . $category->id . '/delete') }}">
+            <button class="btn btn-danger">Suprimmer</button>
+        </a>
+    </div>
+</div>
 @stop

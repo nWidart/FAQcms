@@ -9,26 +9,22 @@
 {{-- Content --}}
 @section('content')
 <div class="page-header">
-    <h3>
-        Question Management
-
-        <div class="pull-right">
-            <!-- <input type="text" placeholder="Search..." class="jsSearchQuestions"> -->
-            <form class="form-search" method="POST" action="" style="display: inline;">
-                <input type="text" class="input-medium search-query search" name="search" placeholder="Search...">
-                <button type="submit" class="btn">Search</button>
-            </form>
-            <a href="{{ URL::to('admin/questions/create') }}" class="btn btn-small btn-info"><i class="icon-plus-sign icon-white"></i> Create</a>
-        </div>
-    </h3>
+    <a href="{{ URL::to('admin/questions/create') }}" class="btn btn-small btn-info"><i class="icon-plus-sign icon-white"></i> Create</a>
+    <!-- <input type="text" placeholder="Search..." class="jsSearchQuestions"> -->
+    <form class="form-search" method="POST" action="" style="display: inline;">
+        <input type="text" class="input-medium search-query search" name="search" placeholder="Search...">
+        <button type="submit" class="btn">Search</button>
+    </form>
 </div>
 
 <table class="table table-bordered table-hover">
     <thead>
         <tr>
-            <th class="span1 smallTr">Actions</th>
+            <th class="span1">id</th>
             <th class="span1">Priority</th>
             <th class="span1">Category</th>
+            <th class="span1">Category 2</th>
+            <th class="span1">Category 3</th>
             <th class="span1">Question fr</th>
             <th class="span1">Réponse fr</th>
             <th class="span1">Question en</th>
@@ -43,13 +39,20 @@
     </thead>
     <tbody>
         @foreach ($questions as $question)
-        <tr>
+        <tr onclick="document.location='{{ URL::to('admin/questions/' . $question->id . '/edit') }}'" style="cursor: pointer">
             <td>
-                <a href="{{ URL::to('admin/questions/' . $question->id . '/edit') }}" class="btn btn-mini">{{ Lang::get('button.edit') }}</a>
-                <a href="{{ URL::to('admin/questions/' . $question->id . '/delete') }}" class="btn btn-mini btn-danger">{{ Lang::get('button.delete') }}</a>
+                {{ $question->id }}
             </td>
             <td>{{ $question->priority }}</td>
-            <td>{{ $question->category->name }}</td>
+            <td>
+                <?php if (!empty( $question->category->name )) echo $question->category->name;  ?>
+            </td>
+            <td>
+            <?php if (!empty( $question->category2->name )) echo $question->category2->name;  ?>
+            </td>
+            <td>
+                <?php if (!empty( $question->category3->name )) echo $question->category3->name;  ?>
+            </td>
             <td>{{ Str::limit( $question->question_fr, 50) }}</td>
             <td>{{ Str::limit( $question->reponse_fr, 50) }}</td>
             <td>{{ Str::limit( $question->question_en, 50) }}</td>

@@ -8,15 +8,7 @@
 
 {{-- Content --}}
 @section('content')
-<div class="page-header">
-	<h3>
-		Create a New Group
-
-		<div class="pull-right">
-			<a href="{{ URL::to('admin/groups') }}" class="btn btn-small btn-inverse"><i class="icon-circle-arrow-left icon-white"></i> Back</a>
-		</div>
-	</h3>
-</div>
+<div class="row">a</div>
 
 <!-- Tabs -->
 <ul class="nav nav-tabs">
@@ -68,7 +60,6 @@
 	<div class="control-group">
 		<div class="controls">
 			<a class="btn btn-link" href="{{ URL::to('admin/groups') }}">Cancel</a>
-			<button type="reset" class="btn">Reset</button>
 			<button type="submit" class="btn btn-success">Create Group</button>
 		</div>
 	</div>

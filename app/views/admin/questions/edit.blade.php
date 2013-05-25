@@ -7,15 +7,7 @@
 
 @section('content')
 
-<div class="page-header">
-    <h3>
-        Question Update
-
-        <div class="pull-right">
-            <a href="{{ URL::to('admin/questions') }}" class="btn btn-small btn-inverse"><i class="icon-circle-arrow-left icon-white"></i> Back</a>
-        </div>
-    </h3>
-</div>
+<div class="row">a</div>
 
 <!-- Tabs -->
 <ul class="nav nav-tabs">
@@ -47,11 +39,31 @@
                 <label class="control-label" for="category">Category</label>
                 <div class="controls">
                     <select name="category" id="category">
+                        <option value="0">Choose Category</option>
                         @foreach($categories as $category)
                             <option value="{{ $category->id }}" <?php echo ( Input::old('category') || ( $question->category_id == $category->id ) ) ? 'selected' : ''; ?>>{{ $category->name }}</option>
                         @endforeach
                     </select>
                     {{ $errors->first('category', '<span class="help-inline">:message</span>') }}
+                    <!-- end category1 -->
+
+                     <select name="category2" id="category2">
+                        <option value="0">Category 2 (none) </option>
+                        @foreach($categories as $category)
+                            <option value="{{ $category->id }}" <?php echo ( Input::old('category2') || ( $question->category_id_2 == $category->id ) ) ? 'selected' : ''; ?>>{{ $category->name }}</option>
+                        @endforeach
+                    </select>
+                    {{ $errors->first('category2', '<span class="help-inline">:message</span>') }}
+                    <!-- end category2 -->
+
+                    <select name="category3" id="category3">
+                        <option value="0">Category 3 (none) </option>
+                        @foreach($categories as $category)
+                            <option value="{{ $category->id }}" <?php echo ( Input::old('category3') || ( $question->category_id_3 == $category->id ) ) ? 'selected' : ''; ?>>{{ $category->name }}</option>
+                        @endforeach
+                    </select>
+                    {{ $errors->first('category3', '<span class="help-inline">:message</span>') }}
+                    <!-- end category3 -->
                 </div>
             </div>
             <!-- ./ Question category -->
@@ -75,6 +87,16 @@
                 </div>
             </div>
             <!-- ./ Question public -->
+
+            <!-- Question checked -->
+            <div class="control-group {{ $errors->has('checked') ? 'error' : '' }}">
+                <label class="control-label" for="checked">checked</label>
+                <div class="controls">
+                    <input type="checkbox" name="checked" id="checked" <?php echo (Input::old('checked')) ? 'checked' : ''; ?> />
+                    {{ $errors->first('checked', '<span class="help-inline">:message</span>') }}
+                </div>
+            </div>
+            <!-- ./ Question checked -->
 
         </div>
         <!-- ./ tab general -->
@@ -197,14 +219,31 @@
     <!-- Form Actions -->
     <div class="control-group">
         <div class="controls">
-            <a class="btn btn-link" href="{{ URL::to('admin/questions') }}">Cancel</a>
-            <button type="reset" class="btn">Reset</button>
-            <button type="submit" class="btn btn-success">Publish</button>
+            <!-- <a class="btn btn-link" href="{{ URL::to('admin/questions') }}">Cancel</a> -->
+            <a href="#modalDelete" role="button" data-toggle="modal" class="btn btn-danger">{{ Lang::get('button.delete') }}</a>
+            <button type="submit" class="btn btn-success">{{ Lang::get('button.edit') }}</button>
         </div>
     </div>
     <!-- ./ form actions -->
 
 {{ Form::close() }}
+
+<div class="modal small hide fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Confirmation de suppresion</h3>
+    </div>
+    <div class="modal-body">
+        <p class="error-text">Etes vous sur de vouloir supprimer la question?</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Annuler</button>
+        <a href="{{ URL::to('admin/questions/' . $question->id . '/delete') }}">
+            <button class="btn btn-danger">Suprimmer</button>
+        </a>
+    </div>
+</div>
+
 @stop
 
 @section('scripts')

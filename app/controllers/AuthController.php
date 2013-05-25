@@ -22,7 +22,7 @@ class AuthController extends BaseController {
         // Are we logged in?
         if (Sentry::check())
         {
-            return Redirect::to('account');
+            return Redirect::to('admin/questions');
         }
 
         // Show the page
@@ -60,7 +60,7 @@ class AuthController extends BaseController {
                     Session::forget('loginRedirect');
 
                     // Redirect to the users page
-                    return Redirect::to('admin')->with('success', Lang::get('account/auth.messages.login.success'));
+                    return Redirect::to('admin/questions')->with('success', Lang::get('account/auth.messages.login.success'));
                 }
 
                 // Redirect to the login page

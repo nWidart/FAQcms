@@ -8,15 +8,7 @@
 
 {{-- Content --}}
 @section('content')
-<div class="page-header">
-    <h3>
-        Create a New Category
-
-        <div class="pull-right">
-            <a href="{{ URL::to('admin/categories') }}" class="btn btn-small btn-inverse"><i class="icon-circle-arrow-left icon-white"></i> Back</a>
-        </div>
-    </h3>
-</div>
+<div class="row">a</div>
 
 {{ Form::open(array('url' => 'admin/categories/create', 'class' => 'form-horizontal')) }}
     <!-- CSRF Token -->
@@ -36,8 +28,7 @@
     <!-- Form Actions -->
     <div class="control-group">
         <div class="controls">
-            <a class="btn btn-link" href="{{ URL::to('admin/categories') }}">Cancel</a>
-            <button type="reset" class="btn">Reset</button>
+            <!-- <a class="btn btn-link" href="{{ URL::to('admin/categories') }}">Cancel</a> -->
             <button type="submit" class="btn btn-success">Publish</button>
         </div>
     </div>

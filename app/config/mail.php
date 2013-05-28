@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'n.widart@gmail.com', 'name' => 'Alys Frequently Asked Questions'),
+	'from' => array('address' => '', 'name' => 'Alys Frequently Asked Questions'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'n.widart@gmail.com',
+	'username' => '',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,6 +93,6 @@ return array(
 	|
 	*/
 
-	'password' => 'widart03',
+	'password' => '',
 
 );

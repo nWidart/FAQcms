@@ -1,10 +1,10 @@
 {
 	"require": {
 		"laravel/framework": "4.0.*",
-		"loic-sharma/profiler": "1.*",
 		"cartalyst/sentry": "2.*",
-		"jasonlewis/basset": "*",
-		"jasonlewis/expressive-date": "1.*"
+		"jasonlewis/expressive-date": "1.*",
+		"loic-sharma/profiler": "1.*",
+		"prologue/phpconsole": "dev-master"
 	},
 	"autoload": {
 		"classmap": [

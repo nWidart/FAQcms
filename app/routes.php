@@ -4,11 +4,6 @@ Route::get('/', function()
     // Show the page
     return Redirect::to('account/login');
 });
-// Route::get('/', function()
-// {
-// 	return View::make('hello');
-// });
-// Route::get('/', 'AuthController@getLogin');
 
 /*
 |--------------------------------------------------------------------------

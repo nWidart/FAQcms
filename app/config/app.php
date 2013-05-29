@@ -114,10 +114,10 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
-		'Basset\BassetServiceProvider', // Better Asset Management
 		'Cartalyst\Sentry\SentryServiceProvider', // User Management
 		'Profiler\ProfilerServiceProvider', // Debuger
 		'ExpressiveDateServiceProvider',
+		'Prologue\Phpconsole\PhpconsoleServiceProvider',
 
 	),
 
@@ -186,7 +186,7 @@ return array(
 
 		'Sentry'          => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
 		'Profiler'		  => 'Profiler\Facades\Profiler',
-		'Basset'          => 'Basset\Facade', // Better Asset Management
+		'Phpconsole'      => 'Prologue\Phpconsole\Facades\Phpconsole',
 	),
 
 );

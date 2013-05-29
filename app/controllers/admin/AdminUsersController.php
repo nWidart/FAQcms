@@ -11,6 +11,18 @@ class AdminUsersController extends AdminController {
         'superuser' => 'Super user',
         'admin'     => 'Admin Access'
     );
+    /**
+     * Declare the rules for the form validation
+     *
+     * @var array
+     */
+    protected $validationRules = array(
+        'first_name'       => 'required|min:3',
+        'last_name'        => 'required|min:3',
+        'email'            => 'required|email|unique:users,email',
+        'password'         => 'required|between:3,32',
+        'password_confirm' => 'required|between:3,32|same:password',
+    );
 
     /**
      * Show a list of all the users.

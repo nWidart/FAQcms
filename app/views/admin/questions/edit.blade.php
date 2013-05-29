@@ -46,24 +46,6 @@
                     </select>
                     {{ $errors->first('category', '<span class="help-inline">:message</span>') }}
                     <!-- end category1 -->
-
-                     <select name="category2" id="category2">
-                        <option value="0">Category 2 (none) </option>
-                        @foreach($categories as $category)
-                            <option value="{{ $category->id }}" <?php echo ( Input::old('category2') || ( $question->category_id_2 == $category->id ) ) ? 'selected' : ''; ?>>{{ $category->name }}</option>
-                        @endforeach
-                    </select>
-                    {{ $errors->first('category2', '<span class="help-inline">:message</span>') }}
-                    <!-- end category2 -->
-
-                    <select name="category3" id="category3">
-                        <option value="0">Category 3 (none) </option>
-                        @foreach($categories as $category)
-                            <option value="{{ $category->id }}" <?php echo ( Input::old('category3') || ( $question->category_id_3 == $category->id ) ) ? 'selected' : ''; ?>>{{ $category->name }}</option>
-                        @endforeach
-                    </select>
-                    {{ $errors->first('category3', '<span class="help-inline">:message</span>') }}
-                    <!-- end category3 -->
                 </div>
             </div>
             <!-- ./ Question category -->

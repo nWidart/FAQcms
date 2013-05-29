@@ -4,11 +4,22 @@ use Cartalyst\Sentry\Users\Eloquent\User as SentryUserModel;
 
 class User extends SentryUserModel {
 	/**
-	 * The database table used by the model.
+	 * Indicates if the model should soft delete.
 	 *
-	 * @var string
+	 * @var bool
 	 */
-	protected $table = 'users';
+	protected $softDelete = true;
+
+	/**
+	 * The date fields for the model.
+	 *
+	 * @var array
+	 */
+	protected $dates = array(
+		'created_at',
+		'updated_at',
+		'deleted_at',
+	);
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -25,7 +36,7 @@ class User extends SentryUserModel {
 	 */
 	public function fullName()
 	{
-		return $this->first_name . ' ' . $this->last_name;
+		return "{$this->first_name} {$this->last_name}";
 	}
 
 	/**
@@ -48,6 +59,20 @@ class User extends SentryUserModel {
 	public function updated_at()
 	{
 		return ExpressiveDate::make($this->updated_at)->getRelativeDate();
+	}
+
+	/**
+	 * Returns the user Gravatar image url.
+	 *
+	 * @return string
+	 */
+	public function gravatar()
+	{
+		// Generate the Gravatar hash
+		$gravatar = md5(strtolower(trim($this->gravatar)));
+
+		// Return the Gravatar url
+		return "//gravatar.org/avatar/{$gravatar}";
 	}
 
 }

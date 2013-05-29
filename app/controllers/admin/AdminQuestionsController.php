@@ -62,8 +62,6 @@ class AdminQuestionsController extends AdminController {
 
             // The data
             $question->category_id      = Input::get('category');
-            $question->category_id_2      = ( Input::get('category2') == 0 ) ? null : Input::get('category2');
-            $question->category_id_3      = ( Input::get('category3') == 0 ) ? null : Input::get('category3');
             $question->priority         = Input::get('priority');
             $question->actif            = ( Input::get('actif') ) ? 1 : 0 ;
             $question->public           = ( Input::get('public') ) ? 1 : 0 ;

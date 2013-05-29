@@ -23,8 +23,6 @@
             <th class="span1">id</th>
             <th class="span1">Priority</th>
             <th class="span1">Category</th>
-            <th class="span1">Category 2</th>
-            <th class="span1">Category 3</th>
             <th class="span1">Question fr</th>
             <th class="span1">Réponse fr</th>
             <th class="span1">Question en</th>
@@ -46,12 +44,6 @@
             <td>{{ $question->priority }}</td>
             <td>
                 <?php if (!empty( $question->category->name )) echo $question->category->name;  ?>
-            </td>
-            <td>
-            <?php if (!empty( $question->category2->name )) echo $question->category2->name;  ?>
-            </td>
-            <td>
-                <?php if (!empty( $question->category3->name )) echo $question->category3->name;  ?>
             </td>
             <td>{{ Str::limit( $question->question_fr, 50) }}</td>
             <td>{{ Str::limit( $question->reponse_fr, 50) }}</td>

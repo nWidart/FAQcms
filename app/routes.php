@@ -30,13 +30,13 @@ Route::group(array('prefix' => 'admin', 'before' => 'admin-auth'), function()
 // The questions
 Route::group(array('prefix' => 'admin/questions', 'before' => 'admin-auth'), function()
 {
-    Route::get('/', 'AdminQuestionsController@getIndex');
-    Route::post('/', 'AdminQuestionsController@postIndex');
-    Route::get('/create', 'AdminQuestionsController@getCreate');
-    Route::post('/create', 'AdminQuestionsController@postCreate');
-    Route::get('/{questionId}/edit', 'AdminQuestionsController@getEdit');
-    Route::post('/{questionId}/edit', 'AdminQuestionsController@postEdit');
-    Route::get('/{questionId}/delete', 'AdminQuestionsController@getDelete');
+    Route::get('/', 'Controllers\Admin\QuestionsController@getIndex');
+    Route::post('/', 'Controllers\Admin\QuestionsController@postIndex');
+    Route::get('/create', 'Controllers\Admin\QuestionsController@getCreate');
+    Route::post('/create', 'Controllers\Admin\QuestionsController@postCreate');
+    Route::get('/{questionId}/edit', 'Controllers\Admin\QuestionsController@getEdit');
+    Route::post('/{questionId}/edit', 'Controllers\Admin\QuestionsController@postEdit');
+    Route::get('/{questionId}/delete', 'Controllers\Admin\QuestionsController@getDelete');
 });
 
 // The categories

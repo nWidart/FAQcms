@@ -24,7 +24,7 @@ class QuestionsController extends AdminController
         $questions = Question::with('category')->orderBy('category_id', 'ASC')->orderBy('category_id_2', 'ASC')->orderBy('category_id_3', 'ASC')->orderBy('priority', 'ASC')->paginate(20);
 
         // Show the page
-        return View::make( 'admin/questions/index', compact('questions') );
+        return View::make('admin/questions/index', compact('questions'));
     }
 
     public function postIndex()
@@ -36,7 +36,7 @@ class QuestionsController extends AdminController
                         ->orWhere('question_en', 'LIKE', '%' . $searchInput . '%')
                         ->paginate(20);
         // return Response::json( $questions );
-        return View::make( 'admin/questions/index', compact('questions') );
+        return View::make('admin/questions/index', compact('questions'));
     }
 
     /**
@@ -48,7 +48,7 @@ class QuestionsController extends AdminController
     {
         $categories = Category::all();
         // Show the page
-        return View::make('admin/questions/create', compact('categories') );
+        return View::make('admin/questions/create', compact('categories'));
     }
 
     /**
@@ -65,8 +65,8 @@ class QuestionsController extends AdminController
             'question_fr' => 'required',
         );
         // Validate the inputs
-        $validator = Validator::make( Input::all(), $rules );
-        if ($validator->passes() )
+        $validator = Validator::make(Input::all(), $rules);
+        if ( $validator->passes() )
         {
             // Create new question
             $question = new Question;
@@ -114,7 +114,7 @@ class QuestionsController extends AdminController
     public function getEdit($questionId = null)
     {
         // Check if the question exists
-        if (is_null($question = Question::find($questionId)))
+        if ( is_null($question = Question::find($questionId)) )
         {
             // Redirect to the questions management page
             return Redirect::to('admin/questions')->with('error', Lang::get('admin/questions/messages.does_not_exist'));
@@ -133,7 +133,7 @@ class QuestionsController extends AdminController
     public function postEdit($questionId = null)
     {
         // Check if the question exists
-        if (is_null($question = Question::find($questionId)))
+        if ( is_null($question = Question::find($questionId)) )
         {
             // Redirect to the questions management page
             return Redirect::to('admin/questions')->with('error', Lang::get('admin/questions/messages.does_not_exist'));
@@ -150,7 +150,7 @@ class QuestionsController extends AdminController
         $validator = Validator::make(Input::all(), $rules);
 
         // Check if the form validates with success
-        if ($validator->passes())
+        if ( $validator->passes() )
         {
             // Update the question data
             $question->category_id      = Input::get('category');
@@ -172,7 +172,7 @@ class QuestionsController extends AdminController
             $question->remarque2        = Input::get('remarque2');
 
             // Was the question updated?
-            if($question->save())
+            if( $question->save() )
             {
                 // Redirect to the new question page
                 return Redirect::to('admin/questions/' . $questionId . '/edit')->with('success', Lang::get('admin/questions/messages.update.success'));
@@ -195,7 +195,7 @@ class QuestionsController extends AdminController
     public function getDelete($questionId)
     {
         // Check if the blog question exists
-        if ( is_null( $question = Question::find($questionId) ) )
+        if ( is_null( $question = Question::find($questionId)) )
         {
             // Redirect to the questions management page
             return Redirect::to('admin/questions')->with('error', Lang::get('admin/questions/messages.not_found'));

@@ -19,6 +19,7 @@
 
         <!-- CSS
         ================================================== -->
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link href="{{{ asset('assets/css/wysihtml5/bootstrap-wysihtml5-0.0.2.css') }}}" rel="stylesheet">
         <link href="{{{ asset('assets/css/bootstrap/bootplus.css') }}}" rel="stylesheet">
         <link href="{{{ asset('assets/css/bootstrap/bootplus-responsive.css') }}}" rel="stylesheet">

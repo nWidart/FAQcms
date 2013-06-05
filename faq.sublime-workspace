@@ -1,0 +1,1962 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Route-g",
+				"Route-get	Route-get"
+			],
+			[
+				"data-",
+				"data-original-title"
+			],
+			[
+				"char",
+				"charId"
+			],
+			[
+				"cha",
+				"character"
+			],
+			[
+				"chara",
+				"character"
+			],
+			[
+				"pre",
+				"preventDefault"
+			],
+			[
+				"functio",
+				"function"
+			],
+			[
+				"comp",
+				"compareItem"
+			],
+			[
+				"fu",
+				"fun	Function"
+			],
+			[
+				"input",
+				"inputPrice"
+			],
+			[
+				"For",
+				"Form	Laravel: Form::label()"
+			],
+			[
+				"fun",
+				"fun	function …"
+			],
+			[
+				"Form",
+				"Form	Laravel: Form::input()"
+			],
+			[
+				"View",
+				"View	Laravel: View::make()"
+			],
+			[
+				"Account",
+				"AccountController"
+			],
+			[
+				"criticalhi",
+				"criticalHitChance"
+			],
+			[
+				"off",
+				"offHand"
+			],
+			[
+				"_",
+				"_getPercent  (function)"
+			],
+			[
+				"criticalhit",
+				"criticalHitDamage"
+			],
+			[
+				"max",
+				"maximumDamage"
+			],
+			[
+				"attr",
+				"attributes"
+			],
+			[
+				"_g",
+				"_getAttributeTotal  (function)"
+			],
+			[
+				"atta",
+				"attacksPerSecond"
+			],
+			[
+				"criticalHi",
+				"criticalHitChance"
+			],
+			[
+				"of",
+				"offensiveStatistics"
+			],
+			[
+				"heal",
+				"healthGlobeHealingBonus"
+			],
+			[
+				"lifePer",
+				"lifePerKill"
+			],
+			[
+				"life",
+				"lifePerSecond"
+			],
+			[
+				"defens",
+				"defensiveSpecifics"
+			],
+			[
+				"armo",
+				"armorDamageReduction"
+			],
+			[
+				"defensi",
+				"defensiveStatistics"
+			],
+			[
+				"items",
+				"itemsCollection"
+			],
+			[
+				"health",
+				"healthStatistics"
+			],
+			[
+				"item",
+				"itemsCollection"
+			],
+			[
+				"bonus",
+				"bonusGoldGlobeRadius"
+			],
+			[
+				"lifeper",
+				"lifePerSecond"
+			],
+			[
+				"defe",
+				"defensiveSpecifics"
+			],
+			[
+				"total",
+				"totalDamageReduction"
+			],
+			[
+				"damgeRed",
+				"armorDamageReduction"
+			],
+			[
+				"base",
+				"baseStatistics"
+			],
+			[
+				"hero",
+				"heroStats"
+			],
+			[
+				"he",
+				"heroStats"
+			],
+			[
+				"Resist",
+				"Resistance_All"
+			],
+			[
+				"her",
+				"heroArmor"
+			],
+			[
+				"getSki",
+				"getSkillImages"
+			],
+			[
+				"skil",
+				"skillSet"
+			],
+			[
+				"Diablo",
+				"DiabloController"
+			],
+			[
+				"margi",
+				"margin-left"
+			],
+			[
+				"Item",
+				"ItemAttribute"
+			],
+			[
+				"public",
+				"public_path"
+			],
+			[
+				"modi",
+				"modifier"
+			],
+			[
+				"_getHer",
+				"_getCharacterItems"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"btn",
+				"btn-primary"
+			],
+			[
+				"erro",
+				"errors"
+			],
+			[
+				"err",
+				"errors"
+			],
+			[
+				"error",
+				"errorBattletag"
+			],
+			[
+				"json_",
+				"json_encode"
+			],
+			[
+				"firs",
+				"firstName"
+			],
+			[
+				"battle",
+				"battletag"
+			],
+			[
+				"all",
+				"allCharacter"
+			],
+			[
+				"new",
+				"newChar"
+			],
+			[
+				"Inpu",
+				"Input	Laravel: Input::get()"
+			],
+			[
+				"Route",
+				"Route	Laravel: Route::get()"
+			],
+			[
+				"Suc",
+				"successfully"
+			],
+			[
+				"au",
+				"authenticate"
+			],
+			[
+				"success",
+				"successful"
+			],
+			[
+				"Redire",
+				"Redirect	Laravel: Redirect::to_action()"
+			],
+			[
+				"Auth",
+				"Auth	Laravel: Auth::check()"
+			],
+			[
+				"funct",
+				"function"
+			],
+			[
+				"f",
+				"fun	function …"
+			],
+			[
+				"Rout",
+				"Route	Laravel: Route::filter()"
+			],
+			[
+				"upda",
+				"updateData"
+			],
+			[
+				"current",
+				"currentID"
+			],
+			[
+				"loc",
+				"loc_id"
+			],
+			[
+				"po",
+				"pois  (variable)"
+			],
+			[
+				"loca",
+				"location"
+			],
+			[
+				"dbLoca",
+				"dbLocation"
+			],
+			[
+				"list",
+				"listWrapper"
+			],
+			[
+				"ar",
+				"articleWrapper"
+			],
+			[
+				"do",
+				"downloadPage  (function)"
+			],
+			[
+				"lis",
+				"listPOIs"
+			],
+			[
+				"get",
+				"getPOIs"
+			],
+			[
+				"app",
+				"appendTo  (function)"
+			],
+			[
+				"rand",
+				"rand_array"
+			],
+			[
+				"clear",
+				"clearInterval"
+			],
+			[
+				"ser",
+				"serializeArray  (function)"
+			],
+			[
+				"fo",
+				"for	for …"
+			],
+			[
+				"ti",
+				"third"
+			],
+			[
+				"wp_dash",
+				"wp_dashboard_setup"
+			],
+			[
+				"prod",
+				"productList"
+			],
+			[
+				"cursor",
+				"cursor	zen:css_properties"
+			],
+			[
+				"facebook",
+				"facebookUsername"
+			],
+			[
+				"face",
+				"facebookUserId"
+			],
+			[
+				"fa",
+				"facebookUser"
+			],
+			[
+				"jso",
+				"json_encode"
+			],
+			[
+				"text-",
+				"text-decoration"
+			],
+			[
+				"get_tax",
+				"get_taxonomy"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"wp_get_post",
+				"wp_get_post_terms"
+			],
+			[
+				"get_ter",
+				"get_terms"
+			],
+			[
+				"get_hea",
+				"get_header"
+			],
+			[
+				"pri",
+				"print_r"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"j",
+				"jcarousel-clip"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"margin-",
+				"margin-bottom"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"font-s",
+				"font-style"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"re",
+				"readmore"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"sec",
+				"secondNav"
+			],
+			[
+				"d",
+				"display"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"webkit-anim",
+				"-webkit-animation-delay:   (property)"
+			],
+			[
+				"imo",
+				"imo-four"
+			],
+			[
+				"img",
+				"img_wrapper"
+			],
+			[
+				"RECHRU",
+				"RECHRUP1"
+			],
+			[
+				"RECHRGL",
+				"RECHRGLOBAL2"
+			],
+			[
+				"RECHRM",
+				"RECHRMURAL2"
+			],
+			[
+				"RECHR",
+				"RECHRUP2"
+			],
+			[
+				"REC",
+				"RECHRGLOBAL2"
+			],
+			[
+				"CUBUSDAC",
+				"CUBUSDAC2"
+			],
+			[
+				"CUBUSD",
+				"CUBUSDAC1"
+			],
+			[
+				"CUB",
+				"CUBUSDAC2"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/views/site/layouts/default.blade.php",
+			"settings":
+			{
+				"buffer_size": 5827,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/admin/AdminUsersController.php",
+			"settings":
+			{
+				"buffer_size": 10469,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/User/Builds/PHP-lint.sublime-build",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"phpc",
+				"PHP Code Sniffer: Sniff this file"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"fetc",
+				"Fetch: Manage"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"Form",
+				"Format: Php"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"name",
+				"Insert PHP namespace"
+			],
+			[
+				"namespa",
+				"Insert PHP namespace"
+			],
+			[
+				"git",
+				"Gist: Create Public Gist"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"syn cs",
+				"Set Syntax: CSS"
+			],
+			[
+				"fet",
+				"Fetch: File"
+			],
+			[
+				"fe",
+				"Fetch: Manage"
+			],
+			[
+				"gen",
+				"Generate: View"
+			],
+			[
+				"g",
+				"Generate: Model"
+			],
+			[
+				"syn bla",
+				"Set Syntax: Blade"
+			],
+			[
+				"syn bl",
+				"Set Syntax: Blade"
+			],
+			[
+				"syn p",
+				"Set Syntax: PHP"
+			],
+			[
+				"PHP",
+				"Tidy PHP"
+			],
+			[
+				"syn ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"syn x",
+				"Set Syntax: XML"
+			],
+			[
+				"fetch",
+				"Fetch: File"
+			],
+			[
+				"syn htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"syn html",
+				"Set Syntax: HTML"
+			],
+			[
+				"syn h",
+				"Set Syntax: HTML"
+			],
+			[
+				"Ti",
+				"Tidy PHP"
+			],
+			[
+				"phpti",
+				"Snippet: Throw Exception"
+			],
+			[
+				"php",
+				"Tidy PHP"
+			],
+			[
+				"task",
+				"Tasks: New document"
+			],
+			[
+				"syn php",
+				"Set Syntax: PHP"
+			],
+			[
+				"tidy",
+				"Tidy PHP"
+			],
+			[
+				"up",
+				"Gist: Update File"
+			],
+			[
+				"syn js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"tas",
+				"Tasks: New document"
+			],
+			[
+				"script",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"shel",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"syn sh",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"projec",
+				"Project: Edit"
+			],
+			[
+				"save",
+				"Project: Save As"
+			],
+			[
+				"add",
+				"Project: Add Folder"
+			],
+			[
+				"pro",
+				"Project: Edit"
+			],
+			[
+				"proj",
+				"Project: Save As"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"pa",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 705.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Nico/Sites/HEAJ/pda_new/app/libraries/Diablo3/Diablo3Util.php",
+		"/Users/Nico/Sites/HEAJ/pda_new/.htaccess",
+		"/Users/Nico/Sites/HEAJ/pda_new/app/config/heroStats.php",
+		"/Users/Nico/Sites/HEAJ/pda_new/app/views/item/compare.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda_new/app/views/layouts/tables/baseStatistics.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda_new/app/views/layouts/charItems.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda_new/app/config/app.php",
+		"/Users/Nico/Sites/HEAJ/pda_new/composer.json",
+		"/Users/Nico/Library/Application Support/Sublime Text 2/Packages/User/phpcs.sublime-settings",
+		"/Users/Nico/Sites/HEAJ/pda_new/app/views/layouts/default.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda_new/bootstrap/start.php",
+		"/Users/Nico/Sites/HEAJ/pda_new/app/config/local/database.php",
+		"/Users/Nico/Sites/HEAJ/pda_new/app/config/database.php",
+		"/Users/Nico/Sites/HEAJ/pda_new/app/controllers/BaseController.php",
+		"/Users/Nico/Library/Application Support/Sublime Text 2/Packages/Phpcs/phpcs.sublime-settings",
+		"/Users/Nico/Library/Application Support/Sublime Text 2/Packages/User/bh_core.sublime-settings",
+		"/Users/Nico/Library/Application Support/Sublime Text 2/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/Nico/Library/Application Support/Sublime Text 2/Packages/User/Fetch.sublime-settings",
+		"/Users/Nico/Library/Application Support/Sublime Text 2/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/Users/Nico/Sites/HEAJ/pda_new/app/routes.php",
+		"/Users/Nico/Sites/HEAJ/pda_new/app/views/user/character.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda_new/app/views/home.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda_new/app/assets/sass/main.scss",
+		"/Users/Nico/Sites/HEAJ/pda_new/app/tests/models/UserTest.php",
+		"/Users/Nico/Sites/HEAJ/pda_new/app/tests/ExampleTest.php",
+		"/Users/Nico/Sites/HEAJ/pda_new/vendor/cartalyst/sentry/src/Cartalyst/Sentry/Users/Eloquent/User.php",
+		"/Users/Nico/Sites/HEAJ/pda_new/phpunit.xml",
+		"/Users/Nico/Sites/HEAJ/pda_new/app/config/local/app.php",
+		"/Users/Nico/Sites/HEAJ/pda_new/app/config/packages/loic-sharma/profiler/config.php",
+		"/Users/Nico/Sites/HEAJ/pda_new/app/config/packages/prologue/phpconsole/config.php",
+		"/Users/Nico/Sites/HEAJ/pda_new/app/config/mail.php",
+		"/Users/Nico/Sites/HEAJ/pda_new/.gitignore",
+		"/Users/Nico/Sites/HEAJ/pda_new/app/config/local/session.php",
+		"/Users/Nico/Sites/HEAJ/pda_new/app/config/local/cache.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/controllers/CharacterController.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/views/layouts/default.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/views/layouts/notifications.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/views/item/compare.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/views/user/ahprofitcalc.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/views/user/character.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/config/packages/loic-sharma/profiler/config.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/config/app.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/libraries/Diablo3/Diablo3Util.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/views/home.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/models/Item.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/views/account/login.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda2/composer.json",
+		"/Users/Nico/Sites/HEAJ/pda2/app/libraries/ChromePhp.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/models/ItemAttribute.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/models/User.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/models/Character.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/start/artisan.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/views/layouts/navigation.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/config/production/app.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/config/cache.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/config/session.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/config/database.php",
+		"/Users/Nico/Sites/HEAJ/pda2/bootstrap/compiled.php",
+		"/Users/Nico/Sites/HEAJ/pda2/Boxfile",
+		"/Users/Nico/Sites/HEAJ/pda2/bootstrap/start.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/config/production/database.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/config/production/session.php",
+		"/Users/Nico/Sites/HEAJ/pda2/codekit-config.json",
+		"/Users/Nico/Sites/HEAJ/pda2/app/filters.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/config/mail.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/views/user/index.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/controllers/HomeController.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/assets/sass/main.scss",
+		"/Users/Nico/Sites/HEAJ/pda2/app/views/layouts/modals.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/views/layouts/modals/modal_importHeroes.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/config/nw/database.php",
+		"/Users/Nico/Sites/HEAJ/pda2/bootstrap/paths.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/config/nw/app.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/views/account/register.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/controllers/AuthController.php",
+		"/Users/Nico/Sites/HEAJ/pda2/.htaccess",
+		"/Users/Nico/Sites/HEAJ/pda2/app/config/local/app.php",
+		"/Users/Nico/Sites/l4new/app/config/session.php",
+		"/Users/Nico/Sites/l4new/app/config/queue.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/config/nw/cache.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/config/production/cache.php",
+		"/Users/Nico/Sites/HEAJ/pda2/public/assets/js/main.js",
+		"/Users/Nico/Sites/HEAJ/pda2/app/config/dev/database.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/controllers/AccountController.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/controllers/AuctionHouseController.php",
+		"/Users/Nico/Library/Application Support/Sublime Text 2/Packages/Emmet/Default (OSX).sublime-keymap",
+		"/Users/Nico/Sites/HEAJ/pda2/public/assets/css/vendor/m-buttons.css",
+		"/Users/Nico/Sites/HEAJ/pda2/public/assets/css/vendor/m-forms.css",
+		"/Users/Nico/Sites/HEAJ/pda2/public/assets/css/vendor/select2.css",
+		"/Users/Nico/Sites/HEAJ/pda2/public/assets/css/bootstrap/bootstrap-editable.css",
+		"/Users/Nico/Sites/HEAJ/pda2/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php",
+		"/Users/Nico/Sites/HEAJ/pda2/vendor/laravel/framework/src/Illuminate/Http/Request.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/controllers/ItemCompareController.php",
+		"/Users/Nico/Sites/HEAJ/pda2/public/assets/css/vendor/jquery.qtip.css",
+		"/Users/Nico/Sites/HEAJ/pda2/public/assets/css/bootstrap/bootstrap.css",
+		"/Users/Nico/Sites/HEAJ/pda2/app/controllers/DiabloController.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/libraries/Diablo3.php",
+		"/Users/Nico/Sites/HEAJ/pda2/public/assets/js/vendor/jquery.qtip.js",
+		"/Users/Nico/Sites/HEAJ/pda2/app/views/user/goldRealMoney.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/views/layouts/tables/baseStatistics.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/controllers/AunctionHouseController.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/config/queue.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/views/layouts/tables/offensiveStatistics.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/config/local/database.php",
+		"/Users/Nico/Sites/HEAJ/pda2/vendor/laravel/framework/tests/Html/FormBuilderTest.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/views/layouts/tables/healthStatistics.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/config/auth.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/views/layouts/tables/defensiveSpecifics.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/views/layouts/tables/defensiveStatistics.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/libraries/helpers.php",
+		"/Users/Nico/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/Nico/Desktop/buildv2.js",
+		"/Users/Nico/Desktop/compare.js",
+		"/Users/Nico/Sites/HEAJ/pda2/vendor/cartalyst/sentry/src/Cartalyst/Sentry/Users/Eloquent/User.php",
+		"/Users/Nico/Sites/HEAJ/pda2/public/assets/css/m-buttons.css",
+		"/Users/Nico/Sites/HEAJ/pda2/app/views/layouts/tables/damageRange.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/views/emails/auth/welcome.blade.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/services/validators/Register.php",
+		"/Users/Nico/Sites/HEAJ/pda2/vendor/laravel/framework/src/Illuminate/Support/Str.php",
+		"/Users/Nico/Sites/HEAJ/pda2/vendor/laravel/framework/src/Illuminate/Html/HtmlBuilder.php",
+		"/Users/Nico/Sites/HEAJ/pda2/vendor/laravel/framework/src/Illuminate/Foundation/AssetPublisher.php",
+		"/Users/Nico/Sites/HEAJ/pda2/public/assets/css/main.css",
+		"/Users/Nico/Sites/HEAJ/pda2/vendor/laravel/framework/src/Illuminate/Support/helpers.php",
+		"/Users/Nico/Sites/HEAJ/pda2/app/config/dev/app.php",
+		"/Users/Nico/Sites/HEAJ/pda2/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php",
+		"/Users/Nico/Sites/HEAJ/pda2/public/assets/css/alertify.css",
+		"/Users/Nico/Sites/HEAJ/pda2/app/services/validators/Character.php",
+		"/Users/Nico/Sites/HEAJ/pda2/public/assets/css/bootstrap-modal.css"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"]",
+			"[",
+			"]",
+			"[",
+			"string",
+			"heroStats",
+			"http://pda.dev:8888/assets/img/d3/items/large",
+			"image",
+			"http://pda.dev:8888/assets/img/d3/items/large",
+			"http://pda.dev:8888/item/compare",
+			"http://pda.dev:8888/item/compare/",
+			"source",
+			"spirit_stone",
+			"quiver",
+			"axe",
+			"xbow",
+			"php",
+			"none",
+			"ExampleTest",
+			"nWidart",
+			".badge-big > a.hidden-eye {",
+			"quiver",
+			"spear",
+			"cloak",
+			"footer",
+			"false",
+			"window",
+			"bootstrap",
+			"ajax",
+			"bootstrap",
+			"ajax",
+			"bootst",
+			"ajax",
+			"ring",
+			"yellow",
+			"asset",
+			"assets",
+			"armor",
+			"bottom",
+			"jsCharSelect",
+			"Html",
+			"redis",
+			"width: 25%;",
+			"<a class=\"btn\" href=\"#download\">Download</a>",
+			"p",
+			"46",
+			"100",
+			"5238",
+			"5098",
+			"2136",
+			"1138",
+			"red",
+			"green",
+			"red",
+			"2136",
+			"1138",
+			"red",
+			"2136",
+			"1138",
+			"2136",
+			"wrap",
+			"31",
+			"2136",
+			"2219",
+			"Str",
+			"2136",
+			"2219",
+			"strength",
+			"label",
+			"../../\n",
+			";\n",
+			"../",
+			"2",
+			"Deleted",
+			"../",
+			"button",
+			"2",
+			"tooltip-title",
+			"amulet",
+			"tooltipParams",
+			"5",
+			"itemCashOutProfit",
+			"itemBnetProfitPercent",
+			"itemBnetProfit",
+			"item",
+			"class",
+			"Item",
+			"user",
+			"charId",
+			"minutes",
+			"$items['hero_id']",
+			"[$n]",
+			"0",
+			"Min",
+			"Damage_Weapon_Min",
+			"0",
+			"1",
+			"get",
+			"Strength_Item",
+			"goldFind",
+			"strength",
+			"maximumLife",
+			"//",
+			"healthGlobeHealingBonus",
+			"physicalResistance",
+			"defensiveSpecifics",
+			"strength",
+			"attr",
+			"armor",
+			"magicFind",
+			"Magic",
+			"magic",
+			"Magic",
+			"vitalityItem",
+			"intelligenceItem",
+			"rnd",
+			"blue",
+			"healthStatistics",
+			"getLogout",
+			"echo",
+			"profile",
+			"route",
+			"diablo",
+			"register",
+			"account",
+			"item",
+			"> ",
+			"$items['items']"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\"",
+			"{{ URL::to('assets/img/d3/items/large/') }}",
+			"{{ HTML::image('assets/img/d3/items/large/') }}",
+			"{{ HTML::image(\"assets/img/d3/items/large/\") }}",
+			"{{ URL::to('item/compare/') }}",
+			"HTML",
+			"-83",
+			"../../img/",
+			"../../",
+			"$light_blue",
+			"../img",
+			"productposttype",
+			"strtolower(Auth::user()->username)"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/views/site/layouts/default.blade.php",
+					"settings":
+					{
+						"buffer_size": 5827,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2723,
+								2723
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"annotations":
+							[
+								"@TODO",
+								"@README",
+								"@FIXME",
+								"@DEBUG"
+							],
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 1.0,
+							"sublimelinter_disable":
+							[
+								"css"
+							],
+							"sublimelinter_executable_map":
+							{
+								"php": "/Applications/MAMP/bin/php/php5.4.10/bin/php"
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": true,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2309.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/controllers/admin/AdminUsersController.php",
+					"settings":
+					{
+						"buffer_size": 10469,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								714,
+								714
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"annotations":
+							[
+								"@TODO",
+								"@README",
+								"@FIXME",
+								"@DEBUG"
+							],
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 1.0,
+							"sublimelinter_disable":
+							[
+								"css"
+							],
+							"sublimelinter_executable_map":
+							{
+								"php": "/Applications/MAMP/bin/php/php5.4.10/bin/php"
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": true,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 832.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 73.0
+	},
+	"output.phpunit":
+	{
+		"height": 102.0
+	},
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"compo",
+				"composer.json"
+			],
+			[
+				"app",
+				"app/config/app.php"
+			],
+			[
+				"m",
+				"app/assets/sass/main.scss"
+			],
+			[
+				"route",
+				"app/routes.php"
+			],
+			[
+				"main.",
+				"app/assets/sass/main.scss"
+			],
+			[
+				"sentry/eloquent/user",
+				"vendor/cartalyst/sentry/src/Cartalyst/Sentry/Users/Eloquent/User.php"
+			],
+			[
+				"main",
+				"public/assets/js/main.js"
+			],
+			[
+				"diabl",
+				"app/libraries/Diablo3/Diablo3Util.php"
+			],
+			[
+				"no",
+				"app/views/layouts/notifications.blade.php"
+			],
+			[
+				"defa",
+				"app/views/layouts/default.blade.php"
+			],
+			[
+				"nav",
+				"app/views/layouts/navigation.blade.php"
+			],
+			[
+				"diab",
+				"app/libraries/Diablo3/Diablo3Util.php"
+			],
+			[
+				"star",
+				"bootstrap/start.php"
+			],
+			[
+				"mail",
+				"app/config/mail.php"
+			],
+			[
+				"defau",
+				"app/views/layouts/default.blade.php"
+			],
+			[
+				"code",
+				"codekit-config.json"
+			],
+			[
+				"homebla",
+				"app/views/home.blade.php"
+			],
+			[
+				"home",
+				"app/controllers/HomeController.php"
+			],
+			[
+				"chara",
+				"app/views/user/character.blade.php"
+			],
+			[
+				"compa",
+				"app/views/item/compare.blade.php"
+			],
+			[
+				"navi",
+				"app/views/layouts/navigation.blade.php"
+			],
+			[
+				"impor",
+				"app/views/layouts/modals/modal_importHeroes.blade.php"
+			],
+			[
+				"modal",
+				"app/views/layouts/modals.blade.php"
+			],
+			[
+				"mai",
+				"public/assets/js/main.js"
+			],
+			[
+				"box",
+				"Boxfile"
+			],
+			[
+				"m-b",
+				"public/assets/css/vendor/m-buttons.css"
+			],
+			[
+				"m-for",
+				"public/assets/css/vendor/m-forms.css"
+			],
+			[
+				"m-but",
+				"public/assets/css/vendor/m-buttons.css"
+			],
+			[
+				"logi",
+				"app/views/account/login.blade.php"
+			],
+			[
+				"url",
+				"vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php"
+			],
+			[
+				"request",
+				"vendor/laravel/framework/src/Illuminate/Http/Request.php"
+			],
+			[
+				"diablo",
+				"app/controllers/DiabloController.php"
+			],
+			[
+				"views/inde",
+				"app/views/user/index.blade.php"
+			],
+			[
+				"def",
+				"app/views/layouts/default.blade.php"
+			],
+			[
+				"sessio",
+				"app/config/session.php"
+			],
+			[
+				"diablocon",
+				"app/controllers/DiabloController.php"
+			],
+			[
+				"table/defe",
+				"app/views/layouts/tables/defensiveStatistics.blade.php"
+			],
+			[
+				"regist",
+				"app/views/account/register.blade.php"
+			],
+			[
+				"default",
+				"app/views/layouts/default.blade.php"
+			],
+			[
+				"login",
+				"app/views/account/login.blade.php"
+			],
+			[
+				"auth",
+				"app/controllers/AuthController.php"
+			],
+			[
+				"accou",
+				"app/controllers/AccountController.php"
+			],
+			[
+				"dia",
+				"app/libraries/Diablo3/Diablo3Util.php"
+			],
+			[
+				"defe",
+				"app/views/layouts/tables/defensiveSpecifics.blade.php"
+			],
+			[
+				"noti",
+				"app/views/layouts/notifications.blade.php"
+			],
+			[
+				"rou",
+				"app/routes.php"
+			],
+			[
+				"html",
+				"vendor/laravel/framework/src/Illuminate/Html/HtmlBuilder.php"
+			],
+			[
+				"asset",
+				"vendor/laravel/framework/src/Illuminate/Foundation/AssetPublisher.php"
+			],
+			[
+				"file",
+				"vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php"
+			],
+			[
+				"m-bu",
+				"public/assets/css/m-buttons.css"
+			],
+			[
+				"main.cs",
+				"public/assets/css/main.css"
+			],
+			[
+				"user/inde",
+				"app/views/user/index.blade.php"
+			],
+			[
+				"laravel/url",
+				"vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php"
+			],
+			[
+				"profile",
+				"vendor/loic-sharma/profiler/views/profiler.php"
+			],
+			[
+				"profiler",
+				"vendor/loic-sharma/profiler/assets/profiler.css"
+			],
+			[
+				"view/prof",
+				"vendor/loic-sharma/profiler/views/profiler.php"
+			],
+			[
+				"acco",
+				"app/controllers/AccountController.php"
+			],
+			[
+				"filter",
+				"app/filters.php"
+			],
+			[
+				"chro",
+				"app/libraries/ChromePhp.php"
+			],
+			[
+				"vali/user",
+				"app/services/validators/User.php"
+			],
+			[
+				"de",
+				"app/views/layouts/default.blade.php"
+			],
+			[
+				"sentr",
+				"vendor/cartalyst/sentry/src/Cartalyst/Sentry/Sentry.php"
+			],
+			[
+				"vali",
+				"app/services/validators/Validator.php"
+			],
+			[
+				"not",
+				"app/views/layouts/notifications.blade.php"
+			],
+			[
+				"lara/html",
+				"vendor/laravel/framework/src/Illuminate/Html/HtmlBuilder.php"
+			],
+			[
+				"rout",
+				"app/routes.php"
+			],
+			[
+				"lara/for",
+				"vendor/laravel/framework/src/Illuminate/Html/FormBuilder.php"
+			],
+			[
+				"com",
+				"composer.json"
+			],
+			[
+				"mode/us",
+				"app/models/User.php"
+			],
+			[
+				"notif",
+				"app/views/layouts/notifications.blade.php"
+			],
+			[
+				"cat/he",
+				"vendor/cartalyst/sentry/docs/authentication/helpers.md"
+			],
+			[
+				"filt",
+				"app/filters.php"
+			],
+			[
+				"lara/helper",
+				"vendor/laravel/framework/src/Illuminate/Support/helpers.php"
+			],
+			[
+				"helper",
+				"vendor/cartalyst/sentry/docs/authentication/helpers.md"
+			],
+			[
+				"con/app",
+				"app/config/app.php"
+			],
+			[
+				"sentry",
+				"vendor/cartalyst/sentry/src/Cartalyst/Sentry/Sentry.php"
+			],
+			[
+				"sentry/sentr",
+				"vendor/cartalyst/sentry/src/Cartalyst/Sentry/Sentry.php"
+			],
+			[
+				"regi",
+				"app/views/account/register.blade.php"
+			],
+			[
+				"ad/da",
+				"application/controllers/admin/dash.php"
+			],
+			[
+				"rese",
+				"css/reset.css"
+			],
+			[
+				"",
+				"assets/bootstrap/css/bootstrap.min.css"
+			],
+			[
+				"3/",
+				"3_/3.css"
+			],
+			[
+				"in",
+				"index.php"
+			],
+			[
+				"sup",
+				"css/superfish.css"
+			],
+			[
+				"fo",
+				"footer.php"
+			],
+			[
+				"fun",
+				"functions.php"
+			],
+			[
+				"hea",
+				"zonetrial/header.php"
+			],
+			[
+				"func",
+				"zonetrial/functions.php"
+			],
+			[
+				"promo",
+				"zonetrial/page-promotions.php"
+			],
+			[
+				"twea",
+				"zonetrial/inc/tweaks.php"
+			],
+			[
+				"foo",
+				"zonetrial/footer.php"
+			],
+			[
+				"tw",
+				"zonetrial/inc/tweaks.php"
+			],
+			[
+				"fu",
+				"zonetrial/functions.php"
+			],
+			[
+				"hom",
+				"zonetrial/home.php"
+			],
+			[
+				"bra",
+				"zonetrial/page-brands.php"
+			],
+			[
+				"cat",
+				"zonetrial/page-catalog.php"
+			],
+			[
+				"op",
+				"zonetrial/options.php"
+			],
+			[
+				"side",
+				"sidebar-left.php"
+			],
+			[
+				"cont",
+				"content.php"
+			],
+			[
+				"head",
+				"header.php"
+			],
+			[
+				"con",
+				"contact-2.html"
+			],
+			[
+				"mach",
+				"machine-outils.html"
+			],
+			[
+				"bib2",
+				"_FR/bibliotheque18-2.php"
+			],
+			[
+				"inclu/da",
+				"INCLUDES/database.php"
+			],
+			[
+				"up",
+				"_&admin/_updates.php"
+			],
+			[
+				"wp",
+				"wp-config.php"
+			],
+			[
+				"res",
+				"bundles/resizer/resizer.php"
+			],
+			[
+				"client/lis",
+				"application/views/client/client-list.blade.php"
+			],
+			[
+				"edi",
+				"application/views/home/edit-marker.blade.php"
+			],
+			[
+				"marke",
+				"application/views/home/markers-list.blade.php"
+			],
+			[
+				"marker",
+				"application/views/extern/markers-list-client.blade.php"
+			],
+			[
+				"clientbla",
+				"application/views/template/client.blade.php"
+			],
+			[
+				"client",
+				"application/controllers/client.php"
+			],
+			[
+				"lara/auth",
+				"laravel/auth.php"
+			],
+			[
+				"migr/",
+				"application/migrations/2012_11_03_152423_create_users_table.php"
+			],
+			[
+				"lara/se",
+				"laravel/session.php"
+			],
+			[
+				"lara/sess",
+				"laravel/session.php"
+			],
+			[
+				"hel",
+				"laravel/helpers.php"
+			],
+			[
+				"lara/he",
+				"laravel/helpers.php"
+			],
+			[
+				"path",
+				"paths.php"
+			],
+			[
+				"edit",
+				"application/views/home/edit-marker.blade.php"
+			],
+			[
+				"laravel/database/qu",
+				"laravel/database/query.php"
+			],
+			[
+				"app/con",
+				"application/config/application.php"
+			],
+			[
+				"conf",
+				"laravel/config.php"
+			],
+			[
+				"laraer",
+				"laravel/error.php"
+			],
+			[
+				"laraform",
+				"laravel/form.php"
+			],
+			[
+				"larahe",
+				"laravel/helpers.php"
+			],
+			[
+				"larahelp",
+				"laravel/helpers.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 155.0,
+	"status_bar_visible": true
+}

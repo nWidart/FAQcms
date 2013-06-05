@@ -20,8 +20,8 @@
         <!-- CSS
         ================================================== -->
         <link href="{{{ asset('assets/css/wysihtml5/bootstrap-wysihtml5-0.0.2.css') }}}" rel="stylesheet">
-        <link href="{{{ asset('assets/css/bootstrap/bootstrap.css') }}}" rel="stylesheet">
-        <link href="{{{ asset('assets/css/bootstrap/bootstrap-responsive.css') }}}" rel="stylesheet">
+        <link href="{{{ asset('assets/css/bootstrap/bootplus.css') }}}" rel="stylesheet">
+        <link href="{{{ asset('assets/css/bootstrap/bootplus-responsive.css') }}}" rel="stylesheet">
         <link href="{{{ asset('assets/css/tablecloth.css') }}}" rel="stylesheet">
 
         <link href="{{{ asset('assets/css/wysihtml5/prettify.css') }}}" rel="stylesheet">

@@ -1,6 +1,7 @@
 <?php
 
-class AdminUsersController extends AdminController {
+class AdminUsersController extends AdminController
+{
 
     /**
      * Holds some static permissions

@@ -29,11 +29,10 @@
         <tr>
             <th class="span1">@lang('admin/questions/table.priority')</th>
             <th class="span1">@lang('admin/questions/table.category')</th>
+            <th class="span1">@lang('admin/questions/table.title_fr')</th>
             <th class="span1">@lang('admin/questions/table.question_fr')</th>
-            <th class="span1">@lang('admin/questions/table.repsonse_fr')</th>
             <th class="span1">@lang('admin/questions/table.active')</th>
             <th class="span1">@lang('admin/questions/table.public')</th>
-            <th class="span1">@lang('admin/questions/table.title_fr')</th>
             <th class="span1">@lang('admin/questions/table.created_at')</th>
         </tr>
     </thead>
@@ -44,12 +43,10 @@
             <td>
                 <?php if (!empty( $question->category->name )) echo $question->category->name;  ?>
             </td>
+            <td>{{ Str::limit( $question->title_fr, 50) }}</td>
             <td>{{ Str::limit( $question->question_fr, 50) }}</td>
-            <td>{{ Str::limit( $question->reponse_fr, 50) }}</td>
             <td>{{ $question->actif }}</td>
             <td>{{ $question->public }}</td>
-            <td>{{ Str::limit( $question->title_fr, 10) }}</td>
-            <!-- <td>{{ Str::limit( $question->keywords_fr, 10) }}</td> -->
             <td>{{ $question->created_at() }}</td>
         </tr>
         @endforeach

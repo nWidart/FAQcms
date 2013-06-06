@@ -1,14 +1,15 @@
 <?php namespace Controllers\Admin;
 
-use AdminController;
-use Config;
-use Input;
-use Lang;
-use Redirect;
-use Sentry;
-use Validator;
-use View;
-use Question;
+use AdminController,
+    Config,
+    Input,
+    Lang,
+    Redirect,
+    Sentry,
+    Validator,
+    View,
+    Question,
+    Category;
 
 class QuestionsController extends AdminController
 {

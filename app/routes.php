@@ -30,7 +30,7 @@ Route::group(array('prefix' => 'admin', 'before' => 'admin-auth'), function()
 // The questions
 Route::group(array('prefix' => 'admin/questions', 'before' => 'admin-auth'), function()
 {
-    Route::get('/', 'Controllers\Admin\QuestionsController@getIndex');
+    Route::get('/', array('as' => 'questions', 'uses' => 'Controllers\Admin\QuestionsController@getIndex'));
     Route::post('/', 'Controllers\Admin\QuestionsController@postIndex');
     Route::get('/create', 'Controllers\Admin\QuestionsController@getCreate');
     Route::post('/create', 'Controllers\Admin\QuestionsController@postCreate');

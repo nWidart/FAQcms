@@ -67,7 +67,7 @@
                             <li {{ (Request::is('admin/categories*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/categories') }}}">Categories</a></li>
                             <li class="dropdown{{ (Request::is('admin/users*|admin/groups*') ? ' active' : '') }}">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="{{ URL::to('admin/users') }}">
-                                    <i class="icon-user icon-white"></i> Users <span class="caret"></span>
+                                    <i class="icon-user icon-white"></i> Users <i class="icon-angle-down"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li{{ (Request::is('admin/users*') ? ' class="active"' : '') }}><a href="{{ URL::to('admin/users') }}"><i class="icon-user"></i> Users</a></li>
@@ -82,7 +82,7 @@
                             <li>
                                 <div class="btn-group">
                                     <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                                        <i class="icon-user"></i> admin <span class="caret"></span>
+                                        <i class="icon-user"></i> admin <i class="icon-angle-down"></i>
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li><a href="{{URL::to('account/logout')}}"><i class="icon-share"></i> Logout</a></li>

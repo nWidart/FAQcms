@@ -3,6 +3,6 @@
 return array(
 
     'edit'   => 'Save',
-    'delete' => 'D',
+    'delete' => 'Delete',
     'reset' => 'Reset'
 );

@@ -8,7 +8,16 @@
 
 {{-- Content --}}
 @section('content')
-<div class="row">a</div>
+<div class="page-header">
+    <h2>
+        Create a question
+
+        <div class="pull-right">
+            <a href="{{ route('questions') }}" class="btn btn-small btn-inverse"><i class="icon-circle-arrow-left icon-white"></i> Back</a>
+        </div>
+    </h2>
+</div>
+
 <!-- Tabs -->
 <ul class="nav nav-tabs">
     <li class="active"><a href="#tab-general" data-toggle="tab">General</a></li>
@@ -204,6 +213,8 @@
     <!-- Form Actions -->
     <div class="control-group">
         <div class="controls">
+            <a class="btn btn-link" href="{{ URL::to('admin/questions') }}">Cancel</a>
+            <button type="reset" class="btn">{{ Lang::get('button.reset') }}</button>
             <button type="submit" class="btn btn-success">Publish</button>
         </div>
     </div>

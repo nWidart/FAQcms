@@ -66,7 +66,7 @@
                             <li {{ (Request::is('admin/questions*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/questions') }}}">Questions</a></li>
                             <li {{ (Request::is('admin/categories*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/categories') }}}">Categories</a></li>
                             <li class="dropdown{{ (Request::is('admin/users*|admin/groups*') ? ' active' : '') }}">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="{{ URL::to('admin/users') }}">
+                                <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="{{ URL::to('admin/users') }}">
                                     <i class="icon-user icon-white"></i> Users <i class="icon-angle-down"></i>
                                 </a>
                                 <ul class="dropdown-menu">
@@ -81,7 +81,7 @@
                             <li class="divider-vertical"></li>
                             <li>
                                 <div class="btn-group">
-                                    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"  data-hover="dropdown">
                                         <i class="icon-user"></i> admin <i class="icon-angle-down"></i>
                                     </a>
                                     <ul class="dropdown-menu">
@@ -127,6 +127,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="{{{ asset('assets/js/vendor/wysihtml5/wysihtml5-0.4.0pre.min.js') }}}"></script>
         <script src="{{{ asset('assets/js/bootstrap/bootstrap.js') }}}"></script>
+        <script src="{{{ asset('assets/js/bootstrap/twitter-bootstrap-hover-dropdown.min.js') }}}"></script>
         <script src="{{{ asset('assets/js/vendor/wysihtml5/bootstrap-wysihtml5-0.0.2.js') }}}"></script>
 
 

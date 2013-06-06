@@ -60,7 +60,7 @@
 
             <!-- Question actif -->
             <div class="control-group {{ $errors->has('actif') ? 'error' : '' }}">
-                <label class="control-label" for="actif">Actif</label>
+                <label class="control-label" for="actif">Active</label>
                 <div class="controls">
                     <input type="checkbox" name="actif" id="actif" <?php echo (Input::old('actif')  || ( $question->actif) ) ? 'checked' : ''; ?> />
                     {{ $errors->first('actif', '<span class="help-inline">:message</span>') }}
@@ -70,23 +70,13 @@
 
             <!-- Question public -->
             <div class="control-group {{ $errors->has('public') ? 'error' : '' }}">
-                <label class="control-label" for="public">public</label>
+                <label class="control-label" for="public">Public</label>
                 <div class="controls">
                     <input type="checkbox" name="public" id="public" <?php echo ( Input::old('public')  || ( $question->public) ) ? 'checked' : ''; ?> />
                     {{ $errors->first('public', '<span class="help-inline">:message</span>') }}
                 </div>
             </div>
             <!-- ./ Question public -->
-
-            <!-- Question checked -->
-            <div class="control-group {{ $errors->has('checked') ? 'error' : '' }}">
-                <label class="control-label" for="checked">checked</label>
-                <div class="controls">
-                    <input type="checkbox" name="checked" id="checked" <?php echo (Input::old('checked')) ? 'checked' : ''; ?> />
-                    {{ $errors->first('checked', '<span class="help-inline">:message</span>') }}
-                </div>
-            </div>
-            <!-- ./ Question checked -->
 
         </div>
         <!-- ./ tab general -->

@@ -9,6 +9,7 @@ use AdminController,
     Validator,
     View,
     Question,
+    QuestionLanguage,
     Category;
 
 class QuestionsController extends AdminController
@@ -22,7 +23,7 @@ class QuestionsController extends AdminController
     public function getIndex()
     {
         // Grab all the questions
-        $questions = Question::with('category')->orderBy('category_id', 'ASC')->orderBy('priority', 'ASC')->paginate(20);
+        $questions = Question::with('category', 'questionsLang.language')->orderBy('category_id', 'ASC')->paginate(20);
 
         // Show the page
         return View::make('admin/questions/index', compact('questions'));

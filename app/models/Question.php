@@ -5,13 +5,17 @@ class Question extends Eloquent {
      *
      * @var string
      */
-    protected $table = 'questions';
+    protected $table = 'questions2';
 
     public function category()
     {
         return $this->belongsTo('Category', 'category_id');
     }
 
+    public function questionsLang()
+    {
+        return $this->hasMany('QuestionLanguage');
+    }
     /**
      * Get the Questions's author.
      *

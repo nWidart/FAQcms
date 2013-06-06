@@ -34,6 +34,7 @@
             <th class="span1">@lang('admin/questions/table.active')</th>
             <th class="span1">@lang('admin/questions/table.public')</th>
             <th class="span1">@lang('admin/questions/table.created_at')</th>
+            <th class="span1">Lang</th>
         </tr>
     </thead>
     <tbody>
@@ -44,10 +45,12 @@
                 <?php if (!empty( $question->category->name )) echo $question->category->name;  ?>
             </td>
             <td>{{ Str::limit( $question->title_fr, 50) }}</td>
-            <td>{{ Str::limit( $question->question_fr, 50) }}</td>
-            <td>{{ $question->actif }}</td>
+            <td>{{ Str::limit( $question->questionsLang->first()->question, 50) }}</td>
+            <td>{{ $question->active }}</td>
             <td>{{ $question->public }}</td>
             <td>{{ $question->created_at() }}</td>
+            <td>{{ $question->questionsLang->first()->language->name }}</td>
+
         </tr>
         @endforeach
     </tbody>

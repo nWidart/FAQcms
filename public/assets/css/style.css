@@ -12,7 +12,12 @@ body {
 tr:hover td {
     background: #D7F0CE!important;
 }
-
+.selectize-control {
+    width: 225px;
+}
+.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus {
+    background-color: #5bc0de;
+}
 
 /* Wrapper for page content to push down footer */
 #wrap {

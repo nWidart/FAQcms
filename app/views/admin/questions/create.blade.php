@@ -50,7 +50,7 @@
             <div class="control-group {{ $errors->has('category') ? 'error' : '' }}">
                 <label class="control-label" for="category">Category</label>
                 <div class="controls">
-                    <select name="category" id="category">
+                    <select name="category" id="category" class="selectJs">
                         <option value="0">Choose Category</option>
                         @foreach($categories as $category)
                             <option value="{{ $category->id }}" <?php echo (Input::old('category')) ? 'selected' :''; ?>>{{ $category->name }}</option>
@@ -226,6 +226,9 @@
 <script>
 $(document).ready(function() {
     $('.wysihtml5-textarea').wysihtml5();
+    $('select.selectJs').selectize({
+        sortField: 'text'
+    });
 });
 </script>
 @stop

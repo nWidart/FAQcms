@@ -6,7 +6,7 @@
         <meta charset="utf-8" />
         <title>
             @section('title')
-            Alys Frequently Asked Questions
+            Frequently Asked Questions
             @show
         </title>
         <meta name="keywords" content="Alys, Faq" />
@@ -20,12 +20,12 @@
         <!-- CSS
         ================================================== -->
         <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-        <link href="{{{ asset('assets/css/wysihtml5/bootstrap-wysihtml5-0.0.2.css') }}}" rel="stylesheet">
+        <link href="{{{ asset('assets/css/vendor/wysihtml5/bootstrap-wysihtml5-0.0.2.css') }}}" rel="stylesheet">
         <link href="{{{ asset('assets/css/bootstrap/bootplus.css') }}}" rel="stylesheet">
         <link href="{{{ asset('assets/css/bootstrap/bootplus-responsive.css') }}}" rel="stylesheet">
-        <link href="{{{ asset('assets/css/tablecloth.css') }}}" rel="stylesheet">
-
-        <link href="{{{ asset('assets/css/wysihtml5/prettify.css') }}}" rel="stylesheet">
+        <link href="{{{ asset('assets/css/vendor/tablecloth.css') }}}" rel="stylesheet">
+        <link href="{{{ asset('assets/css/vendor/selectize.css') }}}" rel="stylesheet">
+        <link href="{{{ asset('assets/css/vendor/wysihtml5/prettify.css') }}}" rel="stylesheet">
 
         <link href="{{{ asset('assets/css/style.css') }}}" rel="stylesheet">
 
@@ -117,29 +117,28 @@
 
         <div id="footer">
           <div class="container-fluid">
-            <p class="muted credit">Frequently Asked Questions | Alys</p>
+            <p class="muted credit">Frequently Asked Questions | Created by <a href="http://www.nicolaswidart.com" title="Nicolas Widart" alt="Nicolas Widart">Nicolas Widart</a></p>
           </div>
         </div>
 
         <!-- Javascripts
         ================================================== -->
-        <script src="{{ asset( 'assets/js/jquery-1.9.1.min.js' )}}"></script>
+        <script src="{{ asset( 'assets/js/vendor/jquery-1.9.1.min.js' )}}"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="{{{ asset('assets/js/wysihtml5/wysihtml5-0.4.0pre.min.js') }}}"></script>
+        <script src="{{{ asset('assets/js/vendor/wysihtml5/wysihtml5-0.4.0pre.min.js') }}}"></script>
         <script src="{{{ asset('assets/js/bootstrap/bootstrap.js') }}}"></script>
-        <script src="{{{ asset('assets/js/wysihtml5/bootstrap-wysihtml5-0.0.2.js') }}}"></script>
+        <script src="{{{ asset('assets/js/vendor/wysihtml5/bootstrap-wysihtml5-0.0.2.js') }}}"></script>
 
 
-        <script src="{{{ asset('assets/js/prettify.js') }}}"></script>
-        <script src="{{{ asset('assets/js/jquery.metadata.js') }}}"></script>
-        <script src="{{{ asset('assets/js/jquery.tablecloth.js') }}}"></script>
-        <script src="{{{ asset('assets/js/jquery.tablesorter.min.js') }}}"></script>
+        <script src="{{{ asset('assets/js/vendor/prettify.js') }}}"></script>
+        <script src="{{{ asset('assets/js/vendor/jquery.metadata.js') }}}"></script>
+        <script src="{{{ asset('assets/js/vendor/jquery.tablecloth.js') }}}"></script>
+        <script src="{{{ asset('assets/js/vendor/jquery.tablesorter.min.js') }}}"></script>
+        <script src="{{{ asset('assets/js/vendor/selectize.min.js') }}}"></script>
         <script src="{{{ asset('assets/js/site.js') }}}"></script>
         <script>
             $(document).ready(function() {
-
             });
-
         </script>
         @section('scripts')
         @show

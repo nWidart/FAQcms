@@ -39,19 +39,20 @@
     </thead>
     <tbody>
         @foreach ($questions as $question)
-        <tr onclick="document.location='{{ URL::to('admin/questions/' . $question->id . '/edit') }}'" style="cursor: pointer">
-            <td>{{ $question->priority }}</td>
-            <td>
-                <?php if (!empty( $question->category->name )) echo $question->category->name;  ?>
-            </td>
-            <td>{{ Str::limit( $question->title_fr, 50) }}</td>
-            <td>{{ Str::limit( $question->questionsLang->first()->question, 50) }}</td>
-            <td>{{ $question->active }}</td>
-            <td>{{ $question->public }}</td>
-            <td>{{ $question->created_at() }}</td>
-            <td>{{ $question->questionsLang->first()->language->name }}</td>
-
-        </tr>
+        @if ( $question->checkQuestion() )
+            <tr onclick="document.location='{{ URL::to('admin/questions/' . $question->id . '/edit') }}'" style="cursor: pointer">
+                <td>{{ $question->priority }}</td>
+                <td>
+                    <?php if (!empty( $question->category->name )) echo $question->category->name;  ?>
+                </td>
+                <td>{{ Str::limit( $question->getTitleAttribute(), 50) }}</td>
+                <td>{{ Str::limit( $question->getQuestionAttribute(), 50) }}</td>
+                <td>{{ $question->active }}</td>
+                <td>{{ $question->public }}</td>
+                <td>{{ $question->created_at() }}</td>
+                <td>{{ $question->getLangAttribute() }}</td>
+            </tr>
+        @endif
         @endforeach
     </tbody>
 </table>

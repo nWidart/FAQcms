@@ -14,6 +14,12 @@ use AdminController,
 
 class QuestionsController extends AdminController
 {
+    protected $validationRules = array(
+        'priority'   => 'required|integer',
+        'category'   => 'required',
+        'question'   => 'required',
+        'lang'       => 'required'
+    );
 
     /**
      * Show a list of all the questions.
@@ -23,7 +29,10 @@ class QuestionsController extends AdminController
     public function getIndex()
     {
         // Grab all the questions
-        $questions = Question::with('category', 'questionsLang.language')->orderBy('category_id', 'ASC')->paginate(20);
+        $questions = Question::with(['category', 'questionsLang' => function ($query)
+        {
+            $query->whereLang('fr');
+        }])->paginate(20);
 
         // Show the page
         return View::make('admin/questions/index', compact('questions'));
@@ -115,14 +124,15 @@ class QuestionsController extends AdminController
     public function getEdit($questionId = null)
     {
         // Check if the question exists
-        if ( is_null($question = Question::find($questionId)) )
+        if ( is_null(Question::find($questionId)) )
         {
             // Redirect to the questions management page
             return Redirect::to('admin/questions')->with('error', Lang::get('admin/questions/messages.does_not_exist'));
         }
+        $question = Question::whereId($questionId)->with('category', 'questionsLang')->first();
         $categories = Category::all();
         // Show the page
-        return View::make('admin/questions/edit', compact('question', 'categories'));
+        return View::make('admin/questions/edit2', compact('question', 'categories'));
     }
 
     /**
@@ -140,15 +150,8 @@ class QuestionsController extends AdminController
             return Redirect::to('admin/questions')->with('error', Lang::get('admin/questions/messages.does_not_exist'));
         }
 
-        // Declare the rules for the form validation
-        $rules = array(
-            'priority'   => 'required|integer',
-            'category' => 'required',
-            'question_fr' => 'required',
-        );
-
         // Validate the inputs
-        $validator = Validator::make(Input::all(), $rules);
+        $validator = Validator::make(Input::all(), $this->validationRules);
 
         // Check if the form validates with success
         if ( $validator->passes() )
@@ -156,21 +159,18 @@ class QuestionsController extends AdminController
             // Update the question data
             $question->category_id      = Input::get('category');
             $question->priority         = Input::get('priority');
-            $question->actif            = ( Input::get('actif') ) ? 1 : 0 ;
+            $question->active            = ( Input::get('actif') ) ? 1 : 0 ;
             $question->public           = ( Input::get('public') ) ? 1 : 0 ;
-            $question->question_fr      = Input::get('question_fr');
-            $question->reponse_fr       = Input::get('reponse_fr');
-            $question->title_fr         = Input::get('title_fr');
-            $question->keywords_fr      = Input::get('keywords_fr');
-            $question->question_en      = Input::get('question_en');
-            $question->reponse_en       = Input::get('reponse_en');
-            $question->title_en         = Input::get('title_en');
-            $question->keywords_en      = Input::get('keywords_en');
-            $question->remarque1        = Input::get('remarque1');
-            $question->remarque2        = Input::get('remarque2');
+
+            $questionContent = QuestionLanguage::find( $question->questionsLang->first()->id );
+            $questionContent->question = Input::get('question');
+            $questionContent->response = Input::get('response');
+            $questionContent->title = Input::get('title');
+            $questionContent->keywords = Input::get('keywords');
+            $questionContent->lang = Input::get('lang');
 
             // Was the question updated?
-            if( $question->save() )
+            if( $question->questionsLang()->save( $questionContent ) )
             {
                 // Redirect to the new question page
                 return Redirect::to('admin/questions/' . $questionId . '/edit')->with('success', Lang::get('admin/questions/messages.update.success'));

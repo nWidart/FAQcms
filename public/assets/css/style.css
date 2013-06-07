@@ -5,6 +5,13 @@ body {
     font-family: 'Lato';
     /* The html and body elements cannot have any padding or margin. */
 }
+.metaData .control-label {
+    text-align: left;
+    width: 100px;
+}
+.metaData .btn-group {
+    margin-left: 50px;
+}
 
 .smallTr {
     width: 6%!important;

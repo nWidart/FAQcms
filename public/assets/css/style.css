@@ -10,7 +10,13 @@ body {
     width: 100px;
 }
 .metaData .btn-group {
-    margin-left: 50px;
+    /*margin-left: 50px;*/
+    display: block;
+    margin: 0 auto;
+    /*width: 180px;*/
+}
+.questionTitle {
+    /*width: 856px!important;*/
 }
 
 .smallTr {

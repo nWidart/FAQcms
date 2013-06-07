@@ -13,12 +13,16 @@
         Question Management
 
         <div class="pull-right">
-            <a href="{{ URL::to('admin/questions/create') }}" class="btn btn-small btn-info"><i class="icon-plus-sign icon-white"></i> Create</a>
-            <!-- <input type="text" placeholder="Search..." class="jsSearchQuestions"> -->
-            <form class="form-search" method="POST" action="" style="display: inline;">
-                <input type="text" class="input-medium search-query search" name="search" placeholder="Search...">
-                <button type="submit" class="btn">Search</button>
-            </form>
+            <div class="btn-toolbar">
+                <div class="btn-group">
+                    <a href="{{ URL::to('admin/questions/create') }}" class="btn btn-small btn-info"><i class="icon-plus-sign icon-white"></i>  Create</a>
+                </div>
+                <div class="btn-group">
+                    <a class="btn <?php echo (!$_GET) ? 'active' :''; ?>" href="{{ URL::to('admin/questions') }}">Show all</a>
+                    <a class="btn <?php echo ( $_GET && $_GET['lang'] == 'fr') ? 'active' : ''; ?>" href="{{ URL::to('admin/questions?lang=fr') }}">{{ HTML::image('assets/img/lang/france.png') }}</a>
+                    <a class="btn <?php echo ( $_GET && $_GET['lang'] == 'en') ? 'active' : ''; ?>" href="{{ URL::to('admin/questions?lang=en') }}">{{ HTML::image('assets/img/lang/United-Kingdom.png') }}</a>
+                </div>
+            </div>
         </div>
     </h2>
 
@@ -38,22 +42,43 @@
         </tr>
     </thead>
     <tbody>
+        @if (!$_GET)
+            @foreach ($questions as $question)
+                @if ( $question->checkQuestion() )
+                    @foreach ( $question->questionsLang->all() as $questionContent)
+                        <tr onclick="document.location='{{ URL::to('admin/questions/' . $question->id . '/edit') }}'" style="cursor: pointer">
+                            <td>{{ $question->priority }}</td>
+                            <td>
+                                <?php if (!empty( $question->category->name )) echo $question->category->name;  ?>
+                            </td>
+                            <td>{{ Str::limit( $questionContent->title, 50) }}</td>
+                            <td>{{ Str::limit( $questionContent->question, 50) }}</td>
+                            <td>{{ $question->active }}</td>
+                            <td>{{ $question->public }}</td>
+                            <td>{{ $question->created_at() }}</td>
+                            <td>{{ $questionContent->lang }}</td>
+                        </tr>
+                    @endforeach
+                @endif
+            @endforeach
+        @else
         @foreach ($questions as $question)
-        @if ( $question->checkQuestion() )
-            <tr onclick="document.location='{{ URL::to('admin/questions/' . $question->id . '/edit') }}'" style="cursor: pointer">
-                <td>{{ $question->priority }}</td>
-                <td>
-                    <?php if (!empty( $question->category->name )) echo $question->category->name;  ?>
-                </td>
-                <td>{{ Str::limit( $question->getTitleAttribute(), 50) }}</td>
-                <td>{{ Str::limit( $question->getQuestionAttribute(), 50) }}</td>
-                <td>{{ $question->active }}</td>
-                <td>{{ $question->public }}</td>
-                <td>{{ $question->created_at() }}</td>
-                <td>{{ $question->getLangAttribute() }}</td>
-            </tr>
-        @endif
+            @if ( $question->checkQuestion() )
+                <tr onclick="document.location='{{ URL::to('admin/questions/' . $question->id . '/edit') }}'" style="cursor: pointer">
+                    <td>{{ $question->priority }}</td>
+                    <td>
+                        <?php if (!empty( $question->category->name )) echo $question->category->name;  ?>
+                    </td>
+                    <td>{{ Str::limit( $question->getTitleAttribute(), 50) }}</td>
+                    <td>{{ Str::limit( $question->getQuestionAttribute(), 50) }}</td>
+                    <td>{{ $question->active }}</td>
+                    <td>{{ $question->public }}</td>
+                    <td>{{ $question->created_at() }}</td>
+                    <td>{{ $question->getLangAttribute() }}</td>
+                </tr>
+            @endif
         @endforeach
+        @endif
     </tbody>
 </table>
 

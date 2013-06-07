@@ -10,7 +10,8 @@ use AdminController,
     View,
     Question,
     QuestionLanguage,
-    Category;
+    Category,
+    ChromePhp;
 
 class QuestionsController extends AdminController
 {
@@ -29,10 +30,15 @@ class QuestionsController extends AdminController
     public function getIndex()
     {
         // Grab all the questions
-        $questions = Question::with(['category', 'questionsLang' => function ($query)
+        $questions = Question::with(['category', 'questionsLang'])->paginate(20);
+
+        if (Input::get('lang'))
         {
-            $query->whereLang('fr');
-        }])->paginate(20);
+            $questions = Question::with(['category', 'questionsLang' => function ($query)
+            {
+                $query->whereLang(Input::get('lang'));
+            }])->paginate(20);
+        }
 
         // Show the page
         return View::make('admin/questions/index', compact('questions'));
@@ -57,6 +63,14 @@ class QuestionsController extends AdminController
      */
     public function getCreate()
     {
+        //
+        $questions = Question::with('questionsLang')->all();
+        foreach ($questions as $question)
+        {
+
+        }
+
+        // Grab all the categories
         $categories = Category::all();
         // Show the page
         return View::make('admin/questions/create', compact('categories'));
@@ -69,39 +83,28 @@ class QuestionsController extends AdminController
      */
     public function postCreate()
     {
-        // Declare the rules for the form validation
-        $rules = array(
-            'priority'   => 'required|integer',
-            'category' => 'required',
-            'question_fr' => 'required',
-        );
         // Validate the inputs
-        $validator = Validator::make(Input::all(), $rules);
+        $validator = Validator::make( Input::all(), $this->validationRules );
         if ( $validator->passes() )
         {
             // Create new question
-            $question = new Question;
-
-            // The data
+            $question                   = new Question;
             $question->category_id      = Input::get('category');
             $question->priority         = Input::get('priority');
-            $question->actif            = ( Input::get('actif') ) ? 1 : 0 ;
+            $question->active           = ( Input::get('actif') ) ? 1 : 0 ;
             $question->public           = ( Input::get('public') ) ? 1 : 0 ;
-            $question->question_fr      = Input::get('question_fr');
-            $question->reponse_fr       = Input::get('reponse_fr');
-            $question->title_fr         = Input::get('title_fr');
-            $question->keywords_fr      = Input::get('keywords_fr');
-            $question->question_en      = Input::get('question_en');
-            $question->reponse_en       = Input::get('reponse_en');
-            $question->title_en         = Input::get('title_en');
-            $question->keywords_en      = Input::get('keywords_en');
-            $question->remarque1        = Input::get('remarque1');
-            $question->remarque2        = Input::get('remarque2');
-            $question->user_id          = Sentry::getId();
+            $question->save();
 
+            $questionContent           = new QuestionLanguage;
+            $questionContent->question = Input::get('question');
+            $questionContent->response = Input::get('response');
+            $questionContent->title    = Input::get('title');
+            $questionContent->keywords = Input::get('keywords');
+            $questionContent->lang     = Input::get('lang');
+            $questionContent->question_id = $question->id;
 
-            // Was the question created
-            if ( $question->save() )
+            // Was the question created?
+            if( $questionContent->save() )
             {
                 // Redirect to the new blog post page
                 return Redirect::to('admin/questions/' . $question->id . '/edit')->with('success', Lang::get('admin/questions/messages.create.success'));
@@ -132,7 +135,7 @@ class QuestionsController extends AdminController
         $question = Question::whereId($questionId)->with('category', 'questionsLang')->first();
         $categories = Category::all();
         // Show the page
-        return View::make('admin/questions/edit2', compact('question', 'categories'));
+        return View::make('admin/questions/edit', compact('question', 'categories'));
     }
 
     /**

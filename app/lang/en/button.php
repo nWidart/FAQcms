@@ -4,5 +4,6 @@ return array(
 
     'edit'   => 'Save',
     'delete' => 'Delete',
-    'reset' => 'Reset'
+    'reset' => 'Reset',
+    'create' => 'Publish'
 );
